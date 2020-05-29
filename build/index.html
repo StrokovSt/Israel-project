@@ -1,13 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Израиль</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="page-header__container container">
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="tel:+(972)2–621–6581">+ (972)2–621–6581</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__logo">
+              <picture class="page-header__picture">
+                <source media="(min-width: 1024px)" srcset="#">
+                <source media="(min-width: 768px)" srcset="#">
+                <img class="page-header__logo-image" src="#" width="120" height="42" alt="Логотип: Masovon">
+              </picture>
+            </a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="#visit-section">Заказать звонок</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <div class="page-main__container container">
+
+        <section class="page-main__headline-section headline-section">
+          <h1 class="headline-section__heading visually-hidden">Израиль</h1>
+          <p class="headline-section__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
+        </section>
+
+        <section class="page-main__about-program-section about-program-section">
+          <h2 class="about-program-section__heading">О программе</h2>
+          <p class="about-program-section__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.
+            Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
+            В течение освоения программ предусмотрен грант от 4200 до 8400$.
+          </p>
+          <a class="about-program-section__link" href="#"><span class="visually-hidden">Смотреть ролик</span></a> <!-- ссылка на предпологаемый плеер -->
+        </section>
+
+        <section class="page-main__programs-section programs-section">
+          <input class="visually-hidden programs-section__slider programs-section__slider--general" type="radio" id="slider-general" name="slider-toggle">
+          <input class="visually-hidden programs-section__slider programs-section__slider--academic" type="radio" id="slider-academic" name="slider-toggle" checked="">
+          <input class="visually-hidden programs-section__slider programs-section__slider--internship" type="radio" id="slider-internship" name="slider-toggle">
+          <input class="visually-hidden programs-section__slider programs-section__slider--volunteering" type="radio" id="slider-volunteering" name="slider-toggle">
+          <input class="visually-hidden programs-section__slider programs-section__slider--religious" type="radio" id="slider-religious" name="slider-toggle">
+          <ul class="programs-section__nav-list">
+            <li class="programs-section__item">
+              <label class="programs-section__nav-heading programs-section__nav-heading--general" for="slider-general">Общее</label>
+            </li>
+            <li class="programs-section__item">
+              <label class="programs-section__nav-heading programs-section__nav-heading--academic" for="slider-academic">Академические</label>
+            </li>
+            <li class="programs-section__item">
+              <label class="programs-section__nav-heading programs-section__nav-heading--internship" for="slider-internship">Стажировки</label>
+            </li>
+            <li class="programs-section__item">
+              <label class="programs-section__nav-heading programs-section__nav-heading--volunteering" for="slider-volunteering">Волонтёрство</label>
+            </li>
+            <li class="programs-section__item">
+              <label class="programs-section__nav-heading programs-section__nav-heading--religious" for="slider-religious">Религиозные</label>
+            </li>
+          </ul>
+          <ul class="programs-section__slide-list">
+            <li class="programs-section__slide">
+              <h3 class="programs-section__slide-head">Общее</h3>
+              <p class="programs-section__slide-description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
+                традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира,
+                это также академический центр, живая лаборатория идей и творческого исследования.
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+                законодательного и делового администрирования или искусства?
+                Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+              </p>
+            </li>
+            <li class="programs-section__slide">
+              <h3 class="programs-section__slide-head">Академические</h3>
+              <p class="programs-section__slide-description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
+                традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира,
+                это также академический центр, живая лаборатория идей и творческого исследования.
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+                законодательного и делового администрирования или искусства?
+                Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+              </p>
+            </li>
+            <li class="programs-section__slide">
+              <h3 class="programs-section__slide-head">Стажировки</h3>
+              <p class="programs-section__slide-description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
+                традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира,
+                это также академический центр, живая лаборатория идей и творческого исследования.
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+                законодательного и делового администрирования или искусства?
+                Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+              </p>
+            </li>
+            <li class="programs-section__slide">
+              <h3 class="programs-section__slide-head">Волонтёрство</h3>
+              <p class="programs-section__slide-description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
+                традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира,
+                это также академический центр, живая лаборатория идей и творческого исследования.
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+                законодательного и делового администрирования или искусства?
+                Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+              </p>
+            </li>
+            <li class="programs-section__slide">
+              <h3 class="programs-section__slide-head">Религиозные</h3>
+              <p class="programs-section__slide-description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
+                традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира,
+                это также академический центр, живая лаборатория идей и творческого исследования.
+                Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+                законодательного и делового администрирования или искусства?
+                Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="page-main__contact-section contact-section">
+          <h2 class="contact-section__heading">Хочу поехать!</h2>
+          <p class="contact-section__description">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+          <form class="contact-section__form" action="#" method="post">
+            <fieldset class="contact-section__fieldset">
+              <label class="contact-section__label visually-hidden" for="user-tel">Телефон:*</label>
+              <input class="contact-section__input contact-section__input--req" type="tel" name="user-tel" id="user-tel" placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required="">
+            </fieldset>
+            <button class="contact-section__button button" type="submit">Перезвоните мне</button>
+          </form>
+        </section>
+
+        <section class="page-main__conditions-section conditions-section">
+          <h2 class="conditions-section__heading">Хочу поехать!</h2>
+          <p class="conditions-section__description">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+          <em class="conditions-section__condition">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</em>
+          <ul class="conditions-section__list">
+            <li class="conditions-section__item conditions-section__item--age">
+              <p class="conditions-section__item-description">Быть в возрасте от 16 до 30 лет</p>
+            </li>
+            <li class="conditions-section__item conditions-section__item--education">
+              <p class="conditions-section__item-description">Иметь оконченное среднее образование</p>
+            </li>
+            <li class="conditions-section__item conditions-section__item--birth">
+              <p class="conditions-section__item-description">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</p>
+            </li>
+            <li class="conditions-section__item conditions-section__item--residence">
+              <p class="conditions-section__item-description">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</p>
+            </li>
+          </ul>
+          <p class="conditions-section__description conditions-section__description--aftermath">
+            Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
+          </p>
+        </section>
+
+        <section class="page-main__gallery-section gallery-section">
+          <h2 class="gallery-section__heading">Жизнь в израиле</h2>
+          <p class="gallery-section__description">
+            Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой
+            культурно-исторической жизнью Израиля и его жителей.
+          </p>
+          <ul class="gallery-section__list">
+            <li class="gallery-section__item">
+              <p class="gallery-section__item-description">Экскурсии по Израилю и знакомство с его историей</p>
+            </li>
+            <li class="gallery-section__item">
+              <p class="gallery-section__item-description">Изучение иврита</p>
+            </li>
+            <li class="gallery-section__item">
+              <p class="gallery-section__item-description">Обучение современным навыкам и профессиям</p>
+            </li>
+            <li class="gallery-section__item">
+              <p class="gallery-section__item-description">Совместные творческие проекты с израильской молодёжью</p>
+            </li>
+            <li class="gallery-section__item">
+              <p class="gallery-section__item-description">Развитие лидерства</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="page-main__exposition-section exposition-section">
+          <h2 class="exposition-section__heading">#masaisrael</h2>
+          <p class="exposition-section__description">Познакомьтесь с программой от первого лица!
+            Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.
+          </p>
+          <button class="exposition-section__button button" type="submit">Смотреть фото</button>
+        </section>
+
+      </div>
+    </main>
+
+
+  </body>
 </html>
