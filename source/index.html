@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
+<!-- Ссылки на картинки и правка элементов будет произведена во время работы над конкретными секциями -->
+
   <body>
     <header class="page-header">
       <div class="page-header__container container">
@@ -16,9 +18,8 @@
             <a class="page-header__link" href="tel:+(972)2–621–6581">+ (972)2–621–6581</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__logo">
+            <a class="page-header__logo" role="banner">
               <picture class="page-header__picture">
-                <source media="(min-width: 1024px)" srcset="#">
                 <source media="(min-width: 768px)" srcset="#">
                 <img class="page-header__logo-image" src="#" width="120" height="42" alt="Логотип: Masovon">
               </picture>
@@ -130,8 +131,9 @@
           <p class="contact-section__description">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
           <form class="contact-section__form" action="#" method="post">
             <fieldset class="contact-section__fieldset">
-              <label class="contact-section__label visually-hidden" for="user-tel">Телефон:*</label>
-              <input class="contact-section__input contact-section__input--req" type="tel" name="user-tel" id="user-tel" placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
+              <label class="contact-section__label visually-hidden" for="contact-section-user-tel">Телефон:*</label>
+              <input class="contact-section__input contact-section__input--req" type="tel" name="contact-section-user-tel" id="contact-section-user-tel"
+              placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
             </fieldset>
             <button class="contact-section__button button" type="submit">Перезвоните мне</button>
           </form>
@@ -193,9 +195,216 @@
           <button class="exposition-section__button button" type="submit">Смотреть фото</button>
         </section>
 
+        <section class="page-main__questions-section questions-section">
+          <h2 class="questions-section__heading">Частые вопросы</h2>
+          <ul class="questions-section__list">
+            <li class="questions-section__question">
+              <p class="questions-section__question-description">Кто организатор? Какие сроки у программы?</p>
+            </li>
+            <li class="questions-section__question">
+              <p class="questions-section__question-description">Что такое грант на обучение?</p>
+            </li>
+            <li class="questions-section__question">
+              <p class="questions-section__question-description">Полная стоимость определяется организаторами в зависимости от направления.
+                В большинстве случаев грант «Маса» не покрывает полную стоимость программы,
+                и поэтому предусматривается определённая доля личного участия.
+              </p>
+            </li>
+            <li class="questions-section__question">
+              <p class="questions-section__question-description">Что такое грант на обучение?</p>
+            </li>
+            <li class="questions-section__question">
+              <p class="questions-section__question-description">Признаётся ли учеба в рамках проекта для дальнейшего обучения?</p>
+            </li>
+            <li class="questions-section__question">
+              <p class="questions-section__question-description">Как выглдядит полный процесс регистрации на программу «Маса»?</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="page-main__reviews-section reviews-section">
+          <h2 class="reviews-section__heading">Отзывы</h2>
+          <div class="reviews-section__slider">
+            <ul class="reviews-section__slider-wrapper">
+              <li class="reviews-section__slider-item">
+                <img class="reviews-section__img" src="#" alt="Автор комментария">
+                <div class="reviews-section__review-card">
+                  <p class="reviews-section__author">Ольга Михайловна</p>
+                  <p class="reviews-section__program">Арт-Тель, февраль-сетнябрь 2017</p>
+                  <p class="reviews-section__description">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура».
+                    Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
+                    С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам.
+                    Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
+                  </p>
+                  <a class="reviews-section__link">Читать подробнее</a>
+                  <ul class="reviews-section__social">
+                    <li class="reviews-section__social-item">
+                      <a class="reviews-section__social-link" href="https://www.facebook.com/">
+                        <span class="visually-hidden">Автор в Facebook</span>
+                      </a>
+                    </li>
+                    <li class="reviews-section__social-item">
+                      <a class="reviews-section__social-link" href="https://twitter.com/">
+                        <span class="visually-hidden">Автор в Twitter</span>
+                      </a>
+                    </li>
+                    <li class="reviews-section__social-item">
+                      <a class="reviews-section__social-link" href="https://www.instagram.com/">
+                        <span class="visually-hidden">Автор в Instagram</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- Остальные элементы будут добавлены во время работы над слайдером -->
+
+            </ul>
+            <a class="reviews-section__control reviews-section__control--left" href="#" role="button"></a>
+            <p class="reviews-section__control reviews-section__control--count">3/6</p>
+            <a class="reviews-section__control reviews-section__control--right" href="#" role="button"></a>
+          </div>
+        </section>
+
+        <section class="page-main__details-section details-section">
+          <h2 class="details-section__heading">Узнать подробности</h2>
+          <label class="details-section__label" for="city-select">Ваш город:</label>
+          <select class="details-section__select" name="city-select" id="city-select">
+            <option class="details-section__option">Новосибирск</option>
+            <option class="details-section__option">Москва</option>
+            <option class="details-section__option">Алматы</option>
+          </select>
+
+          <div class="details-section__curator-card">
+            <img class="details-section__curator-image" src="#" width="112" height="112" alt="Куратор">
+            <div class="details-section__curator-info">
+              <em class="details-section__curator">Ваш куратор:</em>
+              <p class="details-section__curator-name">Анна Горелик</p>
+            </div>
+            <p class="details-section__curator-adress">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+            <ul class="details-section__social">
+              <li class="details-section__social-item">
+                <a class="details-section__social-link" href="https://www.facebook.com/">
+                  <span class="visually-hidden">Куратор в Facebook</span>
+                </a>
+              </li>
+              <li class="details-section__social-item">
+                <a class="details-section__social-link" href="https://www.whatsapp.com/">
+                  <span class="visually-hidden">Куратор в Whatsapp</span>
+                </a>
+              </li>
+              <li class="details-section__social-item">
+                <a class="details-section__social-link" href="https://telegram.org/">
+                  <span class="visually-hidden">Куратор в Telegram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="details-section__description">Куратор является опытным специалистом агентства Сохнут
+            и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
+          </p>
+
+          <a class="details-section__map">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="#">
+              <img class="details-section__map-image" src="#" srcset="#" width="702" height="448"
+              alt="Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+            </picture>
+          </a>
+
+          <form class="details-section__feedback-form" action="#" method="post">
+            <b class="details-section__feedback-attraction">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</b>
+            <p class="details-section__feedback-description">
+              Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+            </p>
+            <fieldset class="details-section__fieldset">
+              <ul class="details-section__list">
+                <li class="details-section__item">
+                  <label class="details-section__label visually-hidden" for="details-section-user-name">Ваше имя:</label>
+                  <input class="details-section__input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ" required>
+                </li>
+                <li class="details-section__item">
+                  <label class="details-section__label visually-hidden" for="details-section-user-tel">Ваш телефон:</label>
+                  <input class="details-section__input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="+7 (923) 41"
+                  pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="details-section__button button" type="submit">Перезвоните мне</button>
+          </form>
+        </section>
       </div>
     </main>
 
+    <footer class="page-footer">
+      <div class="page-footer__container container">
+        <a class="page-footer__logo" role="banner">
+          <picture class="page-footer__picture">
+            <source media="(min-width: 768px)" srcset="#">
+            <img class="page-footer__logo-image" src="#" width="120" height="42" alt="Логотип: Masovon">
+          </picture>
+        </a>
+
+        <span class="page-footer__copyright-text">Copyright someDesignCompany ©2019</span>
+
+        <ul class="page-footer__social">
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://www.facebook.com/">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://twitter.com/">
+              <span class="visually-hidden">Мы в Twitter</span>
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a class="page-footer__social-link" href="https://www.instagram.com/">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <template id="call-popup">
+      <div class="call-popup">
+        <button class="call-popup__close-button" type="button">
+          <span class="visually-hidden">закрыть окно</span>
+        </button>
+        <form class="call-popup__form" action="#" method="post">
+          <h2 class="call-popup__heading">Заказать звонок</h2>
+          <fieldset class="call-popup__fieldset">
+            <ul class="call-popup__list">
+              <li class="call-popup__item">
+                <label class="call-popup__label visually-hidden" for="call-popup-user-name">Ваше имя:</label>
+                <input class="call-popup__input questions-section__input--req" type="tel" name="call-popup-user-name" id="call-popup-user-name"
+                placeholder="ИМЯ" required>
+              </li>
+              <li class="call-popup__item call-popup__item--req">
+                <label class="call-popup__label visually-hidden" for="call-popup-user-tel">Телефон:*</label>
+                <input class="call-popup__input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="+7 Введите 10 цифр номера"
+                pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="call-popup__button button" type="submit">Перезвоните мне</button>
+          <input type="checkbox" name="popup-consent" id="popup-consent" value="true">
+          <label class="call-popup__label visually-hidden" for="popup-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+        </form>
+      </div>
+    </template>
+
+    <template id="result-popup">
+      <div class="result-popup">
+        <button class="result-popup__close-button" type="button">
+          <span class="visually-hidden">закрыть окно</span>
+        </button>
+        <h2 class="result-popup__heading">Заявка принята</h2>
+        <p class="result-popup__message">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+        <button class="result-popup__button button">Понятно</button>
+      </div>
+    </template>
 
   </body>
 </html>
