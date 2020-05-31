@@ -1,0 +1,87 @@
+.page-main {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: 906px;
+
+    background-color: rgba(227, 227, 227, 0.5);
+    background-image: url(../img/background-desktop-headline.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.page-main__about-program-section {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 125px;
+    left: -115px;
+    right: 0;
+
+    display: block;
+    height: 604px;
+    width: 1366px;
+
+    background-image: url(../img/background-desktop-about_program-watercolor.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.page-main__programs-section {
+  position: relative;
+
+  margin-top: 200px;
+  margin-bottom: 240px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -50px;
+    right: -100px;
+
+    display: block;
+    height: 426px;
+    width: 680px;
+
+    background-image: url(../img/background-desktop-programs-watercolor.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+
+
+@media (min-width: $big-desktop-width) {
+  .page-main {
+
+    &::after {
+      top: 0;
+
+      height: 826px;
+    }
+  }
+
+  .page-main__about-program-section {
+    margin-top: 20px;
+  }
+}

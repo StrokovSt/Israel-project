@@ -1,0 +1,13 @@
+
+/* ----------------- Разметкdа для основных заголовков ----------------- */
+
+@mixin main-heading {
+  margin: 0;
+  padding: 0;
+
+  font-size: $h2-size;
+  line-height: $small-line-height;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $blue-color;
+}
