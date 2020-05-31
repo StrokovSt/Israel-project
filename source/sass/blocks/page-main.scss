@@ -97,6 +97,26 @@
   }
 }
 
+.page-main__conditions-section {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -250px;
+    left: -320px;
+
+    display: block;
+    height: 1208px;
+    width: 1487px;
+
+    background-image: url(../img/background-desktop-conditions-watercolor.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+}
+
 @media (min-width: $big-desktop-width) {
   .page-main {
 
