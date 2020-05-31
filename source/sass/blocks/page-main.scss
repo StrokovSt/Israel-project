@@ -21,6 +21,10 @@
   }
 }
 
+.page-main__container {
+  padding: 0 210px;
+}
+
 .page-main__about-program-section {
   position: relative;
 
@@ -69,7 +73,29 @@
   }
 }
 
+.page-main__contact-section {
+  position: relative;
 
+  margin-bottom: 240px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -100px;
+    left: -220px;
+
+    display: block;
+    height: 262px;
+    width: 147px;
+
+    background-image: url(../img/background-desktop-contact-watercolor.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
 
 @media (min-width: $big-desktop-width) {
   .page-main {
