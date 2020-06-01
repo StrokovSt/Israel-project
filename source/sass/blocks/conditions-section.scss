@@ -1,4 +1,6 @@
 .conditions-section {
+  display: flex;
+  justify-content: flex-end;
   position: relative;
 
   &::before {
@@ -6,7 +8,7 @@
 
     position: absolute;
     top: -50px;
-    left: -220px;
+    left: -100px;
 
     display: block;
     height: 707px;
@@ -22,7 +24,6 @@
 
 .conditions-section__container {
   width: 600px;
-  margin-left: auto;
   padding-left: 90px;
 }
 

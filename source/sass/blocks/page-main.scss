@@ -21,10 +21,6 @@
   }
 }
 
-.page-main__container {
-  padding: 0 210px;
-}
-
 .page-main__about-program-section {
   position: relative;
 
@@ -51,6 +47,7 @@
 .page-main__programs-section {
   position: relative;
 
+  margin: 0 130px;
   margin-top: 200px;
   margin-bottom: 240px;
 
@@ -76,6 +73,7 @@
 .page-main__contact-section {
   position: relative;
 
+  margin: 0 130px;
   margin-bottom: 240px;
 
   &::before {
@@ -98,18 +96,42 @@
 }
 
 .page-main__conditions-section {
+  margin-bottom: 160px;
+
   &::after {
     content: "";
 
     position: absolute;
     top: -250px;
-    left: -320px;
+    left: -110px;
 
     display: block;
     height: 1208px;
-    width: 1487px;
+    width: 1366px;
 
     background-image: url(../img/background-desktop-conditions-watercolor.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+}
+
+.page-main__gallery-section {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -30px;
+    left: -110px;
+
+    display: block;
+    height: 950px;
+    width: 1366px;
+
+    background-image: url(../img/background-desktop-gallery-watercolor.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
