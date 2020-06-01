@@ -120,6 +120,8 @@
 .page-main__gallery-section {
   position: relative;
 
+  margin-bottom: 280px;
+
   &::after {
     content: "";
 
@@ -132,6 +134,30 @@
     width: 1366px;
 
     background-image: url(../img/background-desktop-gallery-watercolor.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+}
+
+.page-main__exposition-section {
+  position: relative;
+
+  margin-bottom: 135px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -130px;
+    left: -110px;
+
+    display: block;
+    height: 583px;
+    width: 1361px;
+
+    background-image: url(../img/background-desktop-exposition.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
