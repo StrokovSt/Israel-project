@@ -293,30 +293,42 @@
           <div class="reviews-section__slider">
             <ul class="reviews-section__slider-wrapper">
               <li class="reviews-section__slider-item">
-                <img class="reviews-section__img" src="#" alt="Автор комментария">
+                <img class="reviews-section__img" src="/img/desktop-reviews.png" width="364" height="480" alt="Автор комментария">
                 <div class="reviews-section__review-card">
                   <p class="reviews-section__author">Ольга Михайловна</p>
-                  <p class="reviews-section__program">Арт-Тель, февраль-сетнябрь 2017</p>
+                  <div class="reviews-section__program-container">
+                    <p class="reviews-section__program reviews-section__program--colored">Программа:</p>
+                    <p class="reviews-section__program">Арт-Тель, февраль-сетнябрь 2017</p>
+                  </div>
                   <p class="reviews-section__description">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура».
                     Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам.
                     Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
-                  <a class="reviews-section__link">Читать подробнее</a>
+                  <a class="reviews-section__link" href="#">Читать подробнее</a>
                   <ul class="reviews-section__social">
                     <li class="reviews-section__social-item">
                       <a class="reviews-section__social-link" href="https://www.facebook.com/">
                         <span class="visually-hidden">Автор в Facebook</span>
+                        <svg class="reviews-section___svg" width="24" height="24">
+                          <use xlink:href="#icon-facebook"></use>
+                        </svg>
                       </a>
                     </li>
                     <li class="reviews-section__social-item">
                       <a class="reviews-section__social-link" href="https://twitter.com/">
                         <span class="visually-hidden">Автор в Twitter</span>
+                        <svg class="reviews-section___svg" width="24" height="24">
+                          <use xlink:href="#icon-twitter"></use>
+                        </svg>
                       </a>
                     </li>
                     <li class="reviews-section__social-item">
                       <a class="reviews-section__social-link" href="https://www.instagram.com/">
                         <span class="visually-hidden">Автор в Instagram</span>
+                        <svg class="reviews-section___svg" width="24" height="24">
+                          <use xlink:href="#icon-instagram"></use>
+                        </svg>
                       </a>
                     </li>
                   </ul>
@@ -326,9 +338,11 @@
               <!-- Остальные элементы будут добавлены во время работы над слайдером -->
 
             </ul>
-            <a class="reviews-section__control reviews-section__control--left" href="#" role="button"></a>
-            <p class="reviews-section__control reviews-section__control--count">3/6</p>
-            <a class="reviews-section__control reviews-section__control--right" href="#" role="button"></a>
+            <div class="reviews-section__controls-container">
+              <p class="reviews-section__control reviews-section__control--count">3/6</p>
+              <a class="reviews-section__control reviews-section__control--left" href="#" role="button"></a>
+              <a class="reviews-section__control reviews-section__control--right" href="#" role="button"></a>
+            </div>
           </div>
         </section>
 
