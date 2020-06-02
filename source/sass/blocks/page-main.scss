@@ -21,6 +21,10 @@
   }
 }
 
+.page-main__container {
+  padding: 0;
+}
+
 .page-main__about-program-section {
   position: relative;
 
@@ -144,7 +148,7 @@
 .page-main__exposition-section {
   position: relative;
 
-  margin-bottom: 135px;
+  margin-bottom: 335px;
 
   &::after {
     content: "";
