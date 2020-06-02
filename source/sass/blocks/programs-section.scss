@@ -1,12 +1,14 @@
 .programs-section__container {
   display: flex;
   justify-content: space-between;
+  padding-left: 210px;
 }
 
 .programs-section__heading {
   width: 100%;
   @include main-heading;
   margin-bottom: 80px;
+  padding-left: 210px;
 }
 
 .programs-section__nav-list {

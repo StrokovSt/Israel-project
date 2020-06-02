@@ -1,29 +1,18 @@
 .conditions-section {
   display: flex;
   justify-content: flex-end;
-  position: relative;
+  align-items: center;
+  max-width: 1228px;
+  min-height: 710px;
+  margin-right: auto;
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: -50px;
-    left: -100px;
-
-    display: block;
-    height: 707px;
-    width: 581px;
-
-    background-image: url(../img/background-desktop-conditions.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
+  background-image: url(../img/background-desktop-conditions.png);
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .conditions-section__container {
-  width: 600px;
+  width: 50%;
   padding-left: 90px;
 }
 
