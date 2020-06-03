@@ -13,7 +13,7 @@
     height: 906px;
 
     background-color: rgba(227, 227, 227, 0.5);
-    background-image: url(../img/background-desktop-headline.jpg);
+    background-image: url("../img/background-desktop-headline.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@
     width: 100vw;
     height: 608px;
 
-    background-image: url(../img/background-desktop-about_program-watercolor.png);
+    background-image: url("../img/background-desktop-about_program-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,7 +66,7 @@
     height: 426px;
     width: 680px;
 
-    background-image: url(../img/background-desktop-programs-watercolor.png);
+    background-image: url("../img/background-desktop-programs-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -91,7 +91,7 @@
     height: 262px;
     width: 147px;
 
-    background-image: url(../img/background-desktop-contact-watercolor.png);
+    background-image: url("../img/background-desktop-contact-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -114,7 +114,7 @@
     height: 1208px;
     width: 1487px;
 
-    background-image: url(../img/background-desktop-conditions-watercolor.png);
+    background-image: url("../img/background-desktop-conditions-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@
     height: 950px;
     width: 1366px;
 
-    background-image: url(../img/background-desktop-gallery-watercolor.png);
+    background-image: url("../img/background-desktop-gallery-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -162,7 +162,7 @@
     height: 583px;
     width: 100vw;
 
-    background-image: url(../img/background-desktop-exposition.png);
+    background-image: url("../img/background-desktop-exposition.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,7 +173,6 @@
 
 @media (min-width: $big-desktop-width) {
   .page-main {
-
     &::after {
       top: 0;
 

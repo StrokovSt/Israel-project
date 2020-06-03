@@ -23,7 +23,7 @@
   position: relative;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   text-align: left;
 }
@@ -99,7 +99,7 @@
 }
 
 .reviews-section__social-link {
-    &:hover > .reviews-section___svg,
+  &:hover > .reviews-section___svg,
   &:focus > .reviews-section___svg {
     fill: rgba(31, 192, 252, 0.3);
   }

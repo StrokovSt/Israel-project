@@ -4,7 +4,7 @@
   padding-left: 70px;
   margin-left: auto;
 
-  background-image: url(../img/background-desktop-contact.png);
+  background-image: url("../img/background-desktop-contact.png");
   background-position: right;
   background-size: auto;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@
   padding: 0;
   padding-left: 40px;
 
-  font-family: "Fira Sans", "Arial";
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: $big-font-size;
   text-transform: none;
   font-weight: 500;

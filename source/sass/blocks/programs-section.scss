@@ -6,7 +6,9 @@
 
 .programs-section__heading {
   width: 100%;
+
   @include main-heading;
+
   margin-bottom: 80px;
   padding-left: 210px;
 }
@@ -73,6 +75,7 @@
   &::before {
     border-left: 34px solid $gradient-yellow-color;
   }
+
   &::after {
     background: linear-gradient(to right, $yellow-color, $gradient-yellow-color);
   }
