@@ -60,10 +60,26 @@
 }
 
 .conditions-section__list {
+  position: relative;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 18px;
+
+    display: block;
+    height: 90%;
+
+    border-left: 2px dashed rgba(72, 72, 72, 0.2);
+    z-index: -1;
+  }
 }
 
 .conditions-section__item-description {
