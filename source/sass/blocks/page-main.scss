@@ -38,7 +38,7 @@
 
     display: block;
     width: 100vw;
-    height: 608px;
+    height: 604px;
 
     background-image: url("../img/background-desktop-about_program-watercolor.png");
     background-position: center;
@@ -163,6 +163,56 @@
     width: 100vw;
 
     background-image: url("../img/background-desktop-exposition.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.page-main__reviews-section {
+  position: relative;
+
+  margin-bottom: 110px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: block;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("../img/background-desktop-reviews-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.page-main__details-section {
+  position: relative;
+
+  margin-bottom: 72px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -110px;
+    left: 50%;
+
+    display: block;
+    height: 91vh;
+    width: 100vw;
+
+    background-image: url("../img/background-desktop-details-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

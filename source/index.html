@@ -23,9 +23,7 @@
           </li>
           <li class="page-header__item">
             <a class="page-header__logo" role="banner">
-              <picture class="page-header__picture">
-                <img class="page-header__logo-image" src="img/desktop-logo.png"  width="120" height="42" alt="Логотип: Masovon">
-              </picture>
+              <img class="page-header__logo-image" src="img/desktop-logo.png"  width="120" height="42" alt="Логотип: Masovon">
             </a>
           </li>
           <li class="page-header__item">
@@ -348,70 +346,89 @@
 
         <section class="page-main__details-section details-section">
           <h2 class="details-section__heading">Узнать подробности</h2>
-          <label class="details-section__label" for="city-select">Ваш город:</label>
-          <select class="details-section__select" name="city-select" id="city-select">
-            <option class="details-section__option">Новосибирск</option>
-            <option class="details-section__option">Москва</option>
-            <option class="details-section__option">Алматы</option>
-          </select>
+
+          <div class="details-section__city-container">
+            <label class="details-section__label details-section__label--city" for="city-select">Ваш город:</label>
+            <select class="details-section__select" name="city-select" id="city-select">
+              <option class="details-section__option">Новосибирск</option>
+              <option class="details-section__option">Москва</option>
+              <option class="details-section__option">Алматы</option>
+            </select>
+          </div>
 
           <div class="details-section__curator-card">
-            <img class="details-section__curator-image" src="#" width="112" height="112" alt="Куратор">
-            <div class="details-section__curator-info">
-              <em class="details-section__curator">Ваш куратор:</em>
-              <p class="details-section__curator-name">Анна Горелик</p>
+            <img class="details-section__curator-image" src="/img/desktop-details-curator.png" width="112" height="112" alt="Куратор">
+            <div class="details-section__curator-personal-data">
+              <div class="details-section__curator-info">
+                <p class="details-section__curator">Ваш куратор:</p>
+                <p class="details-section__curator-name">Анна Горелик</p>
+              </div>
+              <p class="details-section__curator-adress">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+              <ul class="details-section__social">
+                <li class="details-section__social-item">
+                  <a class="details-section__social-link" href="https://www.facebook.com/">
+                    <span class="visually-hidden">Куратор в Facebook</span>
+                    <svg class="details-section___svg" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="details-section__social-item">
+                  <a class="details-section__social-link" href="https://www.whatsapp.com/">
+                    <span class="visually-hidden">Куратор в Whatsapp</span>
+                    <svg class="details-section___svg" width="24" height="24">
+                      <use xlink:href="#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="details-section__social-item">
+                  <a class="details-section__social-link" href="https://telegram.org/">
+                    <span class="visually-hidden">Куратор в Telegram</span>
+                    <svg class="details-section___svg" width="24" height="24">
+                      <use xlink:href="#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <p class="details-section__curator-adress">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
-            <ul class="details-section__social">
-              <li class="details-section__social-item">
-                <a class="details-section__social-link" href="https://www.facebook.com/">
-                  <span class="visually-hidden">Куратор в Facebook</span>
-                </a>
-              </li>
-              <li class="details-section__social-item">
-                <a class="details-section__social-link" href="https://www.whatsapp.com/">
-                  <span class="visually-hidden">Куратор в Whatsapp</span>
-                </a>
-              </li>
-              <li class="details-section__social-item">
-                <a class="details-section__social-link" href="https://telegram.org/">
-                  <span class="visually-hidden">Куратор в Telegram</span>
-                </a>
-              </li>
-            </ul>
+            <p class="details-section__description">Куратор является опытным специалистом агентства Сохнут
+              и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
+            </p>
           </div>
-          <p class="details-section__description">Куратор является опытным специалистом агентства Сохнут
-            и знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте подробнее о программах и выберите свою !
-          </p>
 
           <a class="details-section__map">
             <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="#">
-              <img class="details-section__map-image" src="#" srcset="#" width="702" height="448"
+              <source type="image/webp" media="(min-width: 1024px)" srcset="/img/desktop-details-map.png">
+              <img class="details-section__map-image" src="/img/mobile-details-map.png" width="702" height="448"
               alt="Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
             </picture>
           </a>
 
-          <form class="details-section__feedback-form" action="#" method="post">
-            <b class="details-section__feedback-attraction">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</b>
-            <p class="details-section__feedback-description">
-              Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
-            </p>
-            <fieldset class="details-section__fieldset">
-              <ul class="details-section__list">
-                <li class="details-section__item">
-                  <label class="details-section__label visually-hidden" for="details-section-user-name">Ваше имя:</label>
-                  <input class="details-section__input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ" required>
-                </li>
-                <li class="details-section__item">
-                  <label class="details-section__label visually-hidden" for="details-section-user-tel">Ваш телефон:</label>
-                  <input class="details-section__input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="+7 (923) 41"
-                  pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="details-section__button button" type="submit">Перезвоните мне</button>
-          </form>
+          <article class="details-section__feedback-article">
+            <div class="details-section__feedback-container">
+              <b class="details-section__feedback-attraction">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</b>
+              <p class="details-section__feedback-description">
+                Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+              </p>
+            </div>
+
+            <form class="details-section__feedback-form" action="#" method="post">
+              <fieldset class="details-section__fieldset">
+                <ul class="details-section__list">
+                  <li class="details-section__item">
+                    <label class="visually-hidden" for="details-section-user-name">Ваше имя:</label>
+                    <input class="details-section__input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ" required>
+                  </li>
+                  <li class="details-section__item">
+                    <label class="visually-hidden" for="details-section-user-tel">Ваш телефон:</label>
+                    <input class="details-section__input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="+7 (923) 41"
+                    pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="details-section__button button" type="submit">Перезвоните мне</button>
+            </form>
+          </article>
         </section>
       </div>
     </main>
@@ -419,10 +436,7 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo" role="banner">
-          <picture class="page-footer__picture">
-            <source media="(min-width: 768px)" srcset="#">
-            <img class="page-footer__logo-image" src="#" width="120" height="42" alt="Логотип: Masovon">
-          </picture>
+          <img class="page-footer__logo-image" src="img/desktop-logo.png"  width="120" height="42" alt="Логотип: Masovon">
         </a>
 
         <span class="page-footer__copyright-text">Copyright someDesignCompany ©2019</span>
@@ -431,16 +445,25 @@
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="https://www.facebook.com/">
               <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="page-footer___svg" width="24" height="24">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="https://twitter.com/">
               <span class="visually-hidden">Мы в Twitter</span>
+              <svg class="page-footer___svg" width="24" height="24">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
             </a>
           </li>
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="https://www.instagram.com/">
               <span class="visually-hidden">Мы в Инстаграме</span>
+              <svg class="page-footer___svg" width="24" height="24">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
             </a>
           </li>
         </ul>
