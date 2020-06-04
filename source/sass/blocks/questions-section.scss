@@ -43,6 +43,18 @@
     font-weight: bold;
     color: $yellow-color;
   }
+
+  &--open > .questions-section__item-button {
+    transform: rotate(225deg);
+  }
+
+  &--closed > .questions-section__item-button {
+    transform: rotate(45deg);
+  }
+
+  &--closed > .questions-section__item-description {
+    display: none;
+  }
 }
 
 .questions-section__item-staging {
@@ -67,7 +79,7 @@
   cursor: pointer;
   outline: none;
   transform: rotate(45deg);
-  transition-duration: 0.25s;
+  transition-duration: 0.5s;
 
   &:hover,
   &:focus {
@@ -80,4 +92,67 @@
   margin-top: 24px;
 
   opacity: 0.72;
+}
+
+// анимация для показа/скрытия ответов
+
+@keyframes answer-show {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(-90%);
+    opacity: 0.1;
+  }
+
+  20% {
+    transform: translateY(-80%);
+    opacity: 0.2;
+  }
+
+  30% {
+    transform: translateY(-70%);
+    opacity: 0.3;
+  }
+
+  40% {
+    transform: translateY(-60%);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: translateY(-40%);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: translateY(-30%);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translateY(-20%);
+    opacity: 0.8;
+  }
+
+  90% {
+    transform: translateY(-10%);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.answer-show {
+  animation: answer-show 0.45s;
 }
