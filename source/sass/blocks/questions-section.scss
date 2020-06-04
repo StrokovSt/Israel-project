@@ -79,7 +79,7 @@
   cursor: pointer;
   outline: none;
   transform: rotate(45deg);
-  transition-duration: 0.25s;
+  transition-duration: 0.5s;
 
   &:hover,
   &:focus {
@@ -154,5 +154,5 @@
 }
 
 .answer-show {
-  animation: answer-show 0.75s;
+  animation: answer-show 0.45s;
 }
