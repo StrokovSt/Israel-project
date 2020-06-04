@@ -1,0 +1,29 @@
+.exposition-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.exposition-section__heading {
+  @include main-heading;
+  margin-bottom: 24px;
+}
+
+.exposition-section__description {
+  width: 390px;
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+
+  font-size: $big-font-size;
+  line-height: $big-line-height;
+  color: #ffffff;
+}
+
+.exposition-section__button {
+  @include button;
+  width: 230px;
+}

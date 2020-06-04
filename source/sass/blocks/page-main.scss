@@ -1,0 +1,280 @@
+.page-main {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+
+    display: block;
+    height: 906px;
+
+    background-color: rgba(227, 227, 227, 0.5);
+    background-image: url("../img/background-desktop-headline.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.page-main__container {
+  padding: 0;
+}
+
+.page-main__about-program-section {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    right: 0;
+
+    display: block;
+    width: 1366px;
+    height: 604px;
+
+    background-image: url("../img/background-desktop-about_program-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-50%);
+    z-index: -1;
+  }
+}
+
+.page-main__programs-section {
+  position: relative;
+
+  margin-top: 200px;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -50px;
+    right: -100px;
+
+    display: block;
+    height: 426px;
+    width: 680px;
+
+    background-image: url("../img/background-desktop-programs-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.page-main__contact-section {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 160px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 200px;
+    left: -12vw;
+
+    display: block;
+    height: 262px;
+    width: 147px;
+
+    background-image: url("../img/background-desktop-contact-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.page-main__conditions-section {
+  position: relative;
+  margin-bottom: 160px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -200px;
+    left: -20px;
+
+    display: block;
+    height: 1208px;
+    width: 1487px;
+
+    background-image: url("../img/background-desktop-conditions-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.page-main__gallery-section {
+  position: relative;
+
+  margin-bottom: 280px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -30px;
+    left: -15px;
+
+    display: block;
+    height: 950px;
+    width: 1366px;
+
+    background-image: url("../img/background-desktop-gallery-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+}
+
+.page-main__exposition-section {
+  position: relative;
+
+  margin-bottom: 290px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -130px;
+    left: 50%;
+
+    display: block;
+    height: 583px;
+    width: 100vw;
+
+    background-image: url("../img/background-desktop-exposition.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.page-main__questions-section {
+  position: relative;
+
+  margin-bottom: 130px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 600px;
+    left: 20px;
+
+    display: block;
+    height: 177px;
+    width: 194px;
+
+    background-image: url("../img/background-desktop-bag-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -110px;
+    left: 50%;
+
+    display: block;
+    height: 1119px;
+    width: 100vw;
+
+    background-image: url("../img/background-desktop-questions-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.page-main__reviews-section {
+  position: relative;
+
+  margin-bottom: 110px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: block;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("../img/background-desktop-reviews-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+.page-main__details-section {
+  position: relative;
+
+  margin-bottom: 72px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -110px;
+    left: 50%;
+
+    display: block;
+    height: 94vh;
+    width: 100vw;
+
+    background-image: url("../img/background-desktop-details-watercolor.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}
+
+@media (min-width: $big-desktop-width) {
+  .page-main {
+    &::after {
+      top: 0;
+
+      height: 826px;
+    }
+  }
+
+  .page-main__about-program-section {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+.button {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-size: $big-font-size;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(to right, $yellow-color, $gradient-yellow-color);
+
+  &:hover,
+  &:focus {
+    background: $yellow-color;
+  }
+
+  &:active {
+    background: $gradient-yellow-color;
+  }
+}
