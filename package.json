@@ -24,6 +24,7 @@
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
     "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
@@ -33,7 +34,9 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "build-js": "webpack",
+    "start-js": "webpack-dev-server --open"
   },
   "browserslist": [
     "last 2 versions",
