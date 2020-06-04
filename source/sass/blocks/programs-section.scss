@@ -75,7 +75,15 @@
 }
 
 .programs-section__img {
-  fill: rgba(72, 72, 72, 0.2);
+  fill: $black-color;
+}
+
+.programs-section__slider--general:checked ~ .programs-section__nav-list .programs-section__item--general > .programs-section__img,
+.programs-section__slider--academic:checked ~ .programs-section__nav-list .programs-section__item--academic > .programs-section__img,
+.programs-section__slider--internship:checked ~ .programs-section__nav-list .programs-section__item--internship > .programs-section__img,
+.programs-section__slider--volunteering:checked ~ .programs-section__nav-list .programs-section__item--volunteering > .programs-section__img,
+.programs-section__slider--religious:checked ~ .programs-section__nav-list .programs-section__item--religious > .programs-section__img {
+  fill: #ffffff;
 }
 
 .programs-section__slider--general:checked ~ .programs-section__nav-list .programs-section__item--general,
