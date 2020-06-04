@@ -55,13 +55,10 @@
   border: none;
   cursor: pointer;
   outline: none;
-
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
 
   &::-ms-expand {
-      display: none;
+    display: none;
   }
 }
 
