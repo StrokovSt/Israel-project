@@ -1,0 +1,80 @@
+.about-program-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url("../img/background-desktop-about_program.jpg");
+  background-position: 50% 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.about-program-section__heading {
+  @include main-heading;
+}
+
+.about-program-section__description {
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+
+  text-align: center;
+}
+
+.about-program-section__link {
+  position: relative;
+
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-top: 250px;
+  margin-bottom: 185px;
+
+  border-radius: 50%;
+  background: #ffffff;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    content: "";
+    width: 96px;
+    height: 96px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.32;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid $blue-color;
+    border-bottom: 10px solid transparent;
+    z-index: 1;
+
+    transform: translate(-35%, -50%);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(244, 244, 244, 0.9);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background-color: rgba(244, 244, 244, 0.32);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+}

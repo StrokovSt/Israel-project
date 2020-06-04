@@ -1,0 +1,22 @@
+
+/* ----------------- Разметкdа под desktop ----------------- */
+
+.headline-section {
+  display: flex;
+  justify-content: center;
+  min-height: 826px;
+}
+
+.headline-section__description {
+  width: 350px;
+
+  padding: 0;
+  padding-top: 460px;
+  margin: 0;
+
+  text-align: center;
+  font-size: $h3-mini-size;
+  line-height: $small-line-height;
+  font-weight: bold;
+  color: #ffffff;
+}
