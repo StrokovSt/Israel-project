@@ -1,0 +1,40 @@
+
+/* ----------------- Разметкdа под desktop ----------------- */
+
+.page-header__container {
+  position: relative;
+  margin-top: 32px;
+}
+
+.page-header__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.page-header__link {
+  color: $black-color;
+  font-weight: 500;
+
+  &--order {
+    text-transform: uppercase;
+    border-bottom: 1px dashed $black-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $yellow-color;
+    border-color: $yellow-color;
+    transition: 0.1s;
+  }
+
+  &:active {
+    color: $yellow-color;
+    opacity: 0.7;
+  }
+}

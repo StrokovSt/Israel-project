@@ -1,0 +1,132 @@
+.programs-section__container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 210px;
+}
+
+.programs-section__heading {
+  width: 100%;
+
+  @include main-heading;
+
+  margin-bottom: 80px;
+  padding-left: 210px;
+}
+
+.programs-section__nav-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.programs-section__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  width: 228px;
+  margin-bottom: 36px;
+  padding-left: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: -50%;
+    right: -68px;
+
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 34px solid transparent;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    top: -50%;
+    left: 0;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 68px;
+    z-index: -1;
+  }
+}
+
+.programs-section__nav-heading {
+  margin-left: 16px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.programs-section__img {
+  fill: rgba(72, 72, 72, 0.2);
+}
+
+.programs-section__slider--general:checked ~ .programs-section__nav-list .programs-section__item--general,
+.programs-section__slider--academic:checked ~ .programs-section__nav-list .programs-section__item--academic,
+.programs-section__slider--internship:checked ~ .programs-section__nav-list .programs-section__item--internship,
+.programs-section__slider--volunteering:checked ~ .programs-section__nav-list .programs-section__item--volunteering,
+.programs-section__slider--religious:checked ~ .programs-section__nav-list .programs-section__item--religious {
+  &::before {
+    border-left: 34px solid $gradient-yellow-color;
+  }
+
+  &::after {
+    background: linear-gradient(to right, $yellow-color, $gradient-yellow-color);
+  }
+}
+
+.programs-section__slider--general:checked ~ .programs-section__nav-list .programs-section__nav-heading--general,
+.programs-section__slider--academic:checked ~ .programs-section__nav-list .programs-section__nav-heading--academic,
+.programs-section__slider--internship:checked ~ .programs-section__nav-list .programs-section__nav-heading--internship,
+.programs-section__slider--volunteering:checked ~ .programs-section__nav-list .programs-section__nav-heading--volunteering,
+.programs-section__slider--religious:checked ~ .programs-section__nav-list .programs-section__nav-heading--religious {
+  font-size: $big-font-size;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.programs-section__slide-list {
+  margin: 0;
+  margin-left: 100px;
+  margin-right: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.programs-section__slide {
+  display: none;
+  max-width: 560px;
+}
+
+.programs-section__slide-head {
+  @include main-heading;
+  font-size: $h3-size;
+  text-transform: none;
+}
+
+.programs-section__slider--general:checked ~ .programs-section__slide-list .programs-section__slide--general,
+.programs-section__slider--academic:checked ~ .programs-section__slide-list .programs-section__slide--academic,
+.programs-section__slider--internship:checked ~ .programs-section__slide-list .programs-section__slide--internship,
+.programs-section__slider--volunteering:checked ~ .programs-section__slide-list .programs-section__slide--volunteering,
+.programs-section__slider--religious:checked ~ .programs-section__slide-list .programs-section__slide--religious {
+  display: block;
+}
