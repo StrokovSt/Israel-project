@@ -13,19 +13,25 @@
 }
 
 .reviews-section__slider-wrapper {
+  display: flex;
   margin: 0;
   padding: 0;
 
   list-style: none;
+  overflow-x: hidden;
 }
 
 .reviews-section__slider-item {
   position: relative;
 
   display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 100%;
   align-items: flex-start;
 
   text-align: left;
+  transition: transform 0.6s ease;
 }
 
 .reviews-section__img {
@@ -129,8 +135,12 @@
   bottom: 29px;
   left: 400px;
 
-  display: flex;
+  display: none;
   width: 100px;
+
+  &--visible {
+    display: flex;
+  }
 }
 
 .reviews-section__control {
