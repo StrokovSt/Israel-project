@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0;
 
   background-image: url("../img/background-desktop-about_program.jpg");
   background-position: 50% 100%;
@@ -21,6 +22,7 @@
   padding: 0;
 
   text-align: center;
+  font-size: $big-font-size;
 }
 
 .about-program-section__link {
@@ -76,5 +78,46 @@
   &:active {
     background-color: rgba(244, 244, 244, 0.32);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $tablet-width) {
+  .about-program-section {
+    padding: 0 16px;
+
+    background-image: url("../img/background-mobile-about_program.png");
+    background-size: auto;
+  }
+
+  .about-program-section__link {
+    position: relative;
+
+    display: block;
+    width: 54px;
+    height: 54px;
+    margin-top: 130px;
+    margin-bottom: 75px;
+
+    &::after {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::before {
+      border-top: 8px solid transparent;
+      border-left: 16px solid $blue-color;
+      border-bottom: 8px solid transparent;
+    }
+  }
+
+  .about-program-section__heading {
+    font-size: $h2-mini-size;
+  }
+
+  .about-program-section__description {
+    font-size: 16px;
+    text-align: left;
   }
 }

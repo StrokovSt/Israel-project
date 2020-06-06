@@ -3,7 +3,7 @@
 
 .page-header__container {
   position: relative;
-  margin-top: 32px;
+  padding-top: 32px;
 }
 
 .page-header__list {
@@ -15,6 +15,7 @@
   padding: 0;
 
   list-style: none;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .page-header__link {
@@ -44,22 +45,12 @@
   height: 48px;
 }
 
-/* ----------------- Разметкdа под mobile ----------------- */
+/* ----------------- Разметкdа под tablet ----------------- */
 
 @media (max-width: $desktop-width) {
   .page-header__container {
     padding: 0 50px;
-  }
-
-  .page-header__list {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .page-header__item {
-    &--logo {
-      order: 0;
-    }
+    padding-top: 20px;
   }
 }
 
@@ -69,6 +60,7 @@
   .page-header__container {
     margin-top: 20px;
     padding: 0 12px;
+    padding-top: 20px;
   }
 
   .page-header__list {
