@@ -5,6 +5,7 @@ export const reviewsSlider = () => {
   const sliderCounter = sliderContainer.querySelector(`.reviews-section__control-count`);
 
   const slideWidth = parseFloat(getComputedStyle(sliderItems[0]).width);
+  const oldWindowWidth = window.innerWidth;
 
   sliderControllers.classList.add(`reviews-section__controls-container--visible`);
 
@@ -19,6 +20,10 @@ export const reviewsSlider = () => {
   sliderCounter.innerHTML = `1/${items.length}`;
 
   sliderControllers.addEventListener(`click`, function (evt) {
+    if (oldWindowWidth !== window.innerWidth) {
+      location.reload();
+    }
+
     const controlType = evt.target.classList.contains(`reviews-section__control--left`) ? `left` : `right`;
     if (evt.target.tagName === `BUTTON` && controlType === `right`) {
       clickCount += 1;

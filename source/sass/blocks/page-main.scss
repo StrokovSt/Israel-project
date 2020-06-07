@@ -278,6 +278,47 @@
 
 /* ----------------- Разметкdа под tablet ----------------- */
 
+@media (max-width: $desktop-width) {
+  .page-main__headline-section {
+    margin-bottom: 45px;
+
+    &::after {
+      top: -40px;
+
+      display: block;
+      height: 587px;
+      width: 100vw;
+
+      background-image: url("../img/background-mobile-headline.png");
+      background-position: center;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .page-main__conditions-section {
+    margin-bottom: 160px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-main__contact-section {
+    margin-bottom: 0;
+  }
+
+  .page-main__questions-section {
+    margin-bottom: 80px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
 @media (max-width: $tablet-width) {
   .page-main__about-program-section {
     margin-bottom: 80px;
@@ -308,7 +349,7 @@
     position: relative;
 
     margin: 0;
-    margin-bottom: 160px;
+    margin-bottom: 80px;
 
     &::before {
       top: -40px;
@@ -318,25 +359,45 @@
       width: 120px;
     }
   }
-}
 
-/* ----------------- Разметкdа под mobile ----------------- */
+  .page-main__conditions-section {
+    margin-bottom: 80px;
+  }
 
-@media (max-width: $desktop-width) {
-  .page-main__headline-section {
-    margin-bottom: 45px;
+  .page-main__gallery-section {
+    margin-bottom: 80px;
 
     &::after {
-      top: -40px;
+      display: none;
+    }
+  }
 
-      display: block;
-      height: 587px;
+  .page-main__exposition-section {
+    margin-bottom: 80px;
+
+    &::after {
+      top: 50px;
+      left: 50%;
+
+      height: 272px;
+      min-width: 632px;
+      width: 100vw;
+    }
+  }
+
+  .page-main__reviews-section {
+    position: relative;
+
+    margin-bottom: 110px;
+
+    &::after {
+      top: 50%;
+      left: 50%;
+
+      height: 419px;
       width: 100vw;
 
-      background-image: url("../img/background-mobile-headline.png");
-      background-position: center;
-      background-size: auto;
-      background-repeat: no-repeat;
+      background-image: url("../img/background-mobile-reviews-watercolor.png");
     }
   }
 }
