@@ -1,0 +1,209 @@
+.call-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 480px;
+  min-height: 521px;
+  margin: 0 auto;
+  padding: 0 48px;
+  padding-top: 56px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.call-popup__close-button {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 18px;
+  height: 18px;
+
+  background-color: inherit;
+  opacity: 0.5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    height: 26px;
+    width: 2px;
+
+    background-color: $yellow-color;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+}
+
+.call-popup__heading {
+  @include main-heading;
+  font-size: $h3-size;
+  margin-bottom: 16px;
+}
+
+.call-popup__description {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.call-popup__form {
+  text-align: center;
+}
+
+.call-popup__fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.call-popup__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.call-popup__item {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 24px;
+  }
+}
+
+.call-popup__input {
+  width: 360px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-size: $big-font-size;
+  text-transform: none;
+  font-weight: 500;
+  border: 1px solid #e3e3e3;
+  border-radius: 30px;
+  outline: none;
+  transition: 0.2s ease all;
+
+  &:hover,
+  &:focus {
+    border-color: $gradient-yellow-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #999999;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+}
+
+.call-popup__button {
+  width: 264px;
+  margin-bottom: 16px;
+}
+
+.call-popup__label {
+  position: relative;
+
+  display: block;
+  margin: 0 auto;
+  padding-left: 24px;
+  width: 265px;
+
+  font-size: 13px;
+  text-align: left;
+
+  &--consent {
+    &::after {
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $yellow-color;
+    }
+  }
+}
+
+.call-popup__checkbox:checked ~ .call-popup__label {
+  &--consent {
+    &::after {
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $yellow-color;
+
+      background-image: url("../img/check-mark.png");
+      background-size: 120%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $desktop-width) {
+  .call-popup {
+    width: 320px;
+    min-height: 768px;
+    margin: 0 auto;
+    padding: 169px 16px;
+  }
+
+  .call-popup__heading {
+    max-width: 288px;
+
+    text-align: center;
+    font-size: $h3-mini-size;
+  }
+
+  .call-popup__description {
+    max-width: 287px;
+
+    text-align: center;
+  }
+
+  .call-popup__input {
+    width: 288px;
+  }
+}
