@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <div style="display:none">
-    <include src="build/img/sprite_auto.svg"></include>
-  </div>
-
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
     <header class="page-header">
       <div class="page-header__container container">
         <ul class="page-header__list">
@@ -242,6 +242,17 @@
               <p class="gallery-section__item-description">Развитие лидерства</p>
             </li>
           </ul>
+          <div class="gallery-section__controls-container">
+            <button class="gallery-section__control gallery-section__control--left"></button>
+            <ul class="gallery-section__slider-points">
+              <li data-point="0" class="gallery-section__slider-point"></li>
+              <li data-point="1" class="gallery-section__slider-point"></li>
+              <li data-point="2" class="gallery-section__slider-point"></li>
+              <li data-point="3" class="gallery-section__slider-point"></li>
+              <li data-point="4" class="gallery-section__slider-point"></li>
+            </ul>
+            <button class="gallery-section__control gallery-section__control--right"></button>
+          </div>
         </section>
 
         <section class="page-main__exposition-section exposition-section">
@@ -469,8 +480,8 @@
             </ul>
             <div class="reviews-section__controls-container">
               <p class="reviews-section__control-count">3/6</p>
-              <button class="reviews-section__control reviews-section__control--left" href="#" role="button"></button>
-              <button class="reviews-section__control reviews-section__control--right" href="#" role="button"></button>
+              <button class="reviews-section__control reviews-section__control--left"></button>
+              <button class="reviews-section__control reviews-section__control--right"></button>
             </div>
           </div>
         </section>
@@ -538,6 +549,7 @@
           <div class="details-section__iframe-container" id="map"></div>
 
           <article class="details-section__feedback-article">
+            <h3 class="visually-hidden">Остались вопросы? Свяжитесь с нами!</h3>
             <div class="details-section__feedback-container">
               <b class="details-section__feedback-attraction">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</b>
               <p class="details-section__feedback-description">
@@ -643,6 +655,6 @@
     </template>
 
     <script type="module" src="bundle.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU"></script>
   </body>
 </html>

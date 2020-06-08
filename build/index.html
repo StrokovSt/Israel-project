@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <div style="display:none">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-facebook" viewBox="0 0 24 24">
+  <body>
+    <div style="display:none">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-facebook" viewBox="0 0 24 24">
 <path d="M15.5378 5.18705H17.4V1.94345C17.0787 1.89925 15.9738 1.7998 14.687 1.7998C12.0021 1.7998 10.1629 3.48875 10.1629 6.59296V9.44981H7.20001V13.0759H10.1629V22.1998H13.7955V13.0768H16.6385L17.0898 9.45066H13.7946V6.95251C13.7955 5.90445 14.0776 5.18705 15.5378 5.18705Z"></path>
 </symbol><symbol id="icon-general" viewBox="0 0 28.000000 33.000000" preserveAspectRatio="xMidYMid meet">
 
@@ -92,9 +93,8 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
 </symbol><symbol id="icon-whatsapp" viewBox="0 0 24 24">
 <path d="M12.0025 2H11.9975C6.48375 2 2 6.485 2 12C2 14.1875 2.705 16.215 3.90375 17.8612L2.6575 21.5763L6.50125 20.3475C8.0825 21.395 9.96875 22 12.0025 22C17.5162 22 22 17.5138 22 12C22 6.48625 17.5162 2 12.0025 2ZM17.8212 16.1213C17.58 16.8025 16.6225 17.3675 15.8587 17.5325C15.3363 17.6437 14.6537 17.7325 12.3562 16.78C9.4175 15.5625 7.525 12.5763 7.3775 12.3825C7.23625 12.1887 6.19 10.8013 6.19 9.36625C6.19 7.93125 6.91875 7.2325 7.2125 6.9325C7.45375 6.68625 7.8525 6.57375 8.235 6.57375C8.35875 6.57375 8.47 6.58 8.57 6.585C8.86375 6.5975 9.01125 6.615 9.205 7.07875C9.44625 7.66 10.0337 9.095 10.1038 9.2425C10.175 9.39 10.2463 9.59 10.1462 9.78375C10.0525 9.98375 9.97 10.0725 9.8225 10.2425C9.675 10.4125 9.535 10.5425 9.3875 10.725C9.2525 10.8837 9.1 11.0538 9.27 11.3475C9.44 11.635 10.0275 12.5937 10.8925 13.3637C12.0087 14.3575 12.9137 14.675 13.2375 14.81C13.4787 14.91 13.7662 14.8863 13.9425 14.6988C14.1663 14.4575 14.4425 14.0575 14.7238 13.6638C14.9237 13.3813 15.1763 13.3462 15.4412 13.4462C15.7113 13.54 17.14 14.2462 17.4338 14.3925C17.7275 14.54 17.9212 14.61 17.9925 14.7338C18.0625 14.8575 18.0625 15.4388 17.8212 16.1213Z"></path>
 </symbol></svg>
-  </div>
+    </div>
 
-  <body>
     <header class="page-header">
       <div class="page-header__container container">
         <ul class="page-header__list">
@@ -323,6 +323,17 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
               <p class="gallery-section__item-description">Развитие лидерства</p>
             </li>
           </ul>
+          <div class="gallery-section__controls-container">
+            <button class="gallery-section__control gallery-section__control--left"></button>
+            <ul class="gallery-section__slider-points">
+              <li data-point="0" class="gallery-section__slider-point"></li>
+              <li data-point="1" class="gallery-section__slider-point"></li>
+              <li data-point="2" class="gallery-section__slider-point"></li>
+              <li data-point="3" class="gallery-section__slider-point"></li>
+              <li data-point="4" class="gallery-section__slider-point"></li>
+            </ul>
+            <button class="gallery-section__control gallery-section__control--right"></button>
+          </div>
         </section>
 
         <section class="page-main__exposition-section exposition-section">
@@ -550,8 +561,8 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
             </ul>
             <div class="reviews-section__controls-container">
               <p class="reviews-section__control-count">3/6</p>
-              <button class="reviews-section__control reviews-section__control--left" href="#" role="button"></button>
-              <button class="reviews-section__control reviews-section__control--right" href="#" role="button"></button>
+              <button class="reviews-section__control reviews-section__control--left"></button>
+              <button class="reviews-section__control reviews-section__control--right"></button>
             </div>
           </div>
         </section>
@@ -618,6 +629,7 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
           <div class="details-section__iframe-container" id="map"></div>
 
           <article class="details-section__feedback-article">
+            <h3 class="visually-hidden">Остались вопросы? Свяжитесь с нами!</h3>
             <div class="details-section__feedback-container">
               <b class="details-section__feedback-attraction">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</b>
               <p class="details-section__feedback-description">
@@ -720,6 +732,6 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
     </template>
 
     <script type="module" src="bundle.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU"></script>
   </body>
 </html>

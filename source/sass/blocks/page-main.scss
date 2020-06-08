@@ -13,7 +13,7 @@
 
     display: block;
     height: 906px;
-    width: 100vw;
+    width: 1367px;
 
     background-image: url("../img/Group.png");
     background-position: center;
@@ -339,6 +339,7 @@
 @media (max-width: $tablet-width) {
   .page-main__about-program-section {
     margin-bottom: 80px;
+
     &::after {
       top: 185px;
       left: 50%;
