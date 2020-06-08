@@ -129,17 +129,18 @@
 
     position: absolute;
     top: -30px;
-    left: -15px;
+    left: 50%;
 
     display: block;
     height: 950px;
-    width: 1366px;
+    width: 100vw;
 
     background-image: url("../img/background-desktop-gallery-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -2;
+    transform: translateX(-50%);
+    z-index: -1;
   }
 }
 
@@ -297,7 +298,7 @@
   }
 
   .page-main__conditions-section {
-    margin-bottom: 160px;
+    margin-bottom: 120px;
 
     &::after {
       display: none;
@@ -306,6 +307,18 @@
 
   .page-main__contact-section {
     margin-bottom: 0;
+  }
+
+  .page-main__gallery-section {
+    margin-bottom: 120px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-main__exposition-section {
+    margin-bottom: 120px;
   }
 
   .page-main__questions-section {
@@ -366,14 +379,6 @@
 
   .page-main__conditions-section {
     margin-bottom: 80px;
-  }
-
-  .page-main__gallery-section {
-    margin-bottom: 80px;
-
-    &::after {
-      display: none;
-    }
   }
 
   .page-main__exposition-section {

@@ -37,8 +37,14 @@
 .reviews-section__img {
   width: 364px;
   height: 480px;
+  flex-shrink: 0;
 
   text-align: center;
+}
+
+.reviews-section__img img{
+  width: 100%;
+  max-height: 480px;
 }
 
 .reviews-section__review-card {
@@ -49,6 +55,7 @@
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
+  padding-top: 24px;
 
   font-size: $h3-mini-size;
   font-weight: 500;
@@ -194,6 +201,7 @@
 
 @media (max-width: $desktop-width) {
   .reviews-section__img {
+    display: block;
     width: 240px;
     height: 320px;
 
@@ -251,6 +259,10 @@
 
   .reviews-section__review-card {
     margin: 0;
+  }
+
+  .reviews-section__author {
+    padding: 0;
   }
 
   .reviews-section__program-container {

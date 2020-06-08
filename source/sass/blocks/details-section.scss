@@ -152,11 +152,32 @@
   width: 50%;
 
   transform: translateY(-15%);
+
+  &--off {
+    display: none;
+  }
 }
 
 .details-section__map-image img {
   width: 100%;
   height: 448px;
+}
+
+.details-section__iframe-container {
+  position: absolute;
+  top: 15%;
+  right: 0;
+
+  display: none;
+  width: 48%;
+  height: 448px;
+
+  background-color: red;
+  transform: translateY(-15%);
+
+  &--on {
+    display: block;
+  }
 }
 
 .details-section__feedback-article {
@@ -319,6 +340,14 @@
 
   .details-section__map-image {
     width: 320px;
+  }
+
+  .details-section__iframe-container {
+    position: inherit;
+
+    margin-top: 60px;
+    width: 100%;
+    height: 420px;
   }
 
   .details-section__feedback-article {
