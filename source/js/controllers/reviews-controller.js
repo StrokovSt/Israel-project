@@ -5,15 +5,15 @@ export const reviewsSlider = () => {
   const sliderCounter = sliderContainer.querySelector(`.reviews-section__control-count`);
 
   const slideWidth = parseFloat(getComputedStyle(sliderItems[0]).width);
+  let slideStep = -slideWidth;
 
   sliderControllers.classList.add(`reviews-section__controls-container--visible`);
 
   const items = [];
   let clickCount = 0;
-  sliderItems.forEach(function (item, index) {
+  sliderItems.forEach(function (item) {
     items.push({
       item,
-      position: index + 1,
     });
   });
   sliderCounter.innerHTML = `1/${items.length}`;
@@ -25,13 +25,6 @@ export const reviewsSlider = () => {
       if (clickCount >= items.length) {
         clickCount = 0;
       }
-
-      let slideStep = -slideWidth;
-
-      items.forEach((item) => {
-        item.position -= 1;
-        item.item.style.transform = `translateX(` + slideStep * clickCount + `px)`;
-      });
     }
 
     if (evt.target.tagName === `BUTTON` && controlType === `left`) {
@@ -39,15 +32,19 @@ export const reviewsSlider = () => {
       if (clickCount < 0) {
         clickCount = items.length - 1;
       }
-
-      let slideStep = -slideWidth;
-
-      items.forEach((item) => {
-        item.position -= 1;
-        item.item.style.transform = `translateX(` + slideStep * clickCount + `px)`;
-      });
     }
+
+    items.forEach((item) => {
+      item.item.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+    });
 
     sliderCounter.innerHTML = `${clickCount + 1}/${items.length}`;
   });
+
+  window.addEventListener(`resize`, function () {
+    slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
+    items.forEach((item) => {
+      item.item.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+    });
+  }, false);
 };

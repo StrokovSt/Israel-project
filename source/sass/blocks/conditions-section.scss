@@ -3,7 +3,6 @@
   justify-content: flex-end;
   align-items: center;
   max-width: 1228px;
-  min-height: 710px;
   margin-right: auto;
 
   background-image: url("../img/background-desktop-conditions.png");
@@ -56,7 +55,9 @@
   margin-bottom: 30px;
 
   font-size: $big-font-size;
-  font-weight: bold;
+  line-height: $big-line-height;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .conditions-section__list {
@@ -151,5 +152,51 @@
     &::before {
       content: "4";
     }
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $desktop-width) {
+  .conditions-section {
+    padding: 0 16px;
+
+    background-image: none;
+  }
+
+  .conditions-section__container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .conditions-section__heading {
+    font-size: $h2-mini-size;
+    text-align: center;
+  }
+
+  .conditions-section__description {
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    font-size: 14px;
+
+    &--aftermath {
+      max-width: 480px;
+      margin-bottom: 0;
+    }
+  }
+
+  .conditions-section__condition {
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    font-size: 16px;
+  }
+
+  .conditions-section__list {
+    max-width: 480px;
+
+    margin: 0 auto;
   }
 }

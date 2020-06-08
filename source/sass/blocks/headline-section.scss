@@ -9,14 +9,31 @@
 
 .headline-section__description {
   width: 350px;
-
+  margin: 0;
   padding: 0;
   padding-top: 460px;
-  margin: 0;
 
   text-align: center;
   font-size: $h3-mini-size;
   line-height: $small-line-height;
   font-weight: bold;
   color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $desktop-width) {
+  .headline-section {
+    display: flex;
+    justify-content: center;
+    min-height: 506px;
+  }
+
+  .headline-section__description {
+    max-width: 288px;
+    padding-top: 270px;
+
+    font-size: 20px;
+  }
 }

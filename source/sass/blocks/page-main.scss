@@ -1,4 +1,8 @@
-.page-main {
+.page-main__container {
+  padding: 0;
+}
+
+.page-main__headline-section {
   position: relative;
 
   &::after {
@@ -6,27 +10,23 @@
 
     position: absolute;
     top: -80px;
-    left: 0;
-    right: 0;
 
     display: block;
     height: 906px;
+    width: 1367px;
 
-    background-color: rgba(227, 227, 227, 0.5);
-    background-image: url("../img/background-desktop-headline.jpg");
+    background-image: url("../img/Group.png");
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     z-index: -1;
   }
 }
 
-.page-main__container {
-  padding: 0;
-}
-
 .page-main__about-program-section {
   position: relative;
+
+  margin-bottom: 200px;
 
   &::after {
     content: "";
@@ -51,9 +51,6 @@
 
 .page-main__programs-section {
   position: relative;
-
-  margin-top: 200px;
-  margin-bottom: 20px;
 
   &::after {
     content: "";
@@ -132,17 +129,18 @@
 
     position: absolute;
     top: -30px;
-    left: -15px;
+    left: 50%;
 
     display: block;
     height: 950px;
-    width: 1366px;
+    width: 100vw;
 
     background-image: url("../img/background-desktop-gallery-watercolor.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -2;
+    transform: translateX(-50%);
+    z-index: -1;
   }
 }
 
@@ -276,5 +274,140 @@
 
   .page-main__about-program-section {
     margin-top: 20px;
+  }
+}
+
+/* ----------------- Разметкdа под tablet ----------------- */
+
+@media (max-width: $desktop-width) {
+  .page-main__headline-section {
+    margin-bottom: 45px;
+
+    &::after {
+      top: -40px;
+
+      display: block;
+      height: 587px;
+      width: 100vw;
+
+      background-image: url("../img/background-mobile-headline.png");
+      background-position: center;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .page-main__conditions-section {
+    margin-bottom: 120px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-main__contact-section {
+    margin-bottom: 0;
+  }
+
+  .page-main__gallery-section {
+    margin-bottom: 120px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-main__exposition-section {
+    margin-bottom: 120px;
+  }
+
+  .page-main__questions-section {
+    margin-bottom: 80px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .page-main__details-section {
+    margin-bottom: 64px;
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $tablet-width) {
+  .page-main__about-program-section {
+    margin-bottom: 80px;
+
+    &::after {
+      top: 185px;
+      left: 50%;
+
+      width: 100vw;
+      height: 186px;
+    }
+  }
+
+  .page-main__programs-section {
+    margin: 0;
+    margin-bottom: 80px;
+
+    &::after {
+      top: 110px;
+      right: -10px;
+
+      display: block;
+      height: 201px;
+      width: 320px;
+    }
+  }
+
+  .page-main__contact-section {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 80px;
+
+    &::before {
+      top: -40px;
+      left: -50px;
+
+      height: 162px;
+      width: 120px;
+    }
+  }
+
+  .page-main__conditions-section {
+    margin-bottom: 80px;
+  }
+
+  .page-main__exposition-section {
+    margin-bottom: 80px;
+
+    &::after {
+      top: 50px;
+      left: 50%;
+
+      height: 272px;
+      min-width: 632px;
+      width: 100vw;
+    }
+  }
+
+  .page-main__reviews-section {
+    position: relative;
+
+    margin-bottom: 110px;
+
+    &::after {
+      top: 50%;
+      left: 50%;
+
+      height: 419px;
+      width: 100vw;
+
+      background-image: url("../img/background-mobile-reviews-watercolor.png");
+    }
   }
 }

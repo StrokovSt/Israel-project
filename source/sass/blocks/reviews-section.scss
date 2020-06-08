@@ -4,7 +4,7 @@
 
 .reviews-section__heading {
   @include main-heading;
-  margin-bottom: 24px;
+  margin-bottom: 60px;
 }
 
 .reviews-section__slider {
@@ -35,6 +35,15 @@
 }
 
 .reviews-section__img {
+  width: 364px;
+  height: 480px;
+  flex-shrink: 0;
+
+  text-align: center;
+}
+
+.reviews-section__img img {
+  width: 100%;
   max-height: 480px;
 }
 
@@ -46,6 +55,7 @@
   margin: 0;
   margin-bottom: 24px;
   padding: 0;
+  padding-top: 24px;
 
   font-size: $h3-mini-size;
   font-weight: 500;
@@ -185,4 +195,111 @@
 
   font-size: $big-font-size;
   opacity: 0.5;
+}
+
+/* ----------------- Разметкdа под tablet ----------------- */
+
+@media (max-width: $desktop-width) {
+  .reviews-section__img {
+    display: block;
+    width: 240px;
+    height: 320px;
+
+    text-align: center;
+  }
+
+  .reviews-section__description {
+    min-height: 220px;
+  }
+
+  .reviews-section__controls-container {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+
+    display: none;
+    width: 100px;
+
+    &--visible {
+      display: flex;
+    }
+
+    transform: translateX(-20%);
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $tablet-width) {
+  .reviews-section {
+    padding: 0 16px;
+  }
+
+  .reviews-section__heading {
+    font-size: $h2-mini-size;
+    margin-bottom: 24px;
+  }
+
+  .reviews-section__slider {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  .reviews-section__slider-item {
+    flex-wrap: wrap;
+  }
+
+  .reviews-section__img {
+    width: 240px;
+    height: 320px;
+    margin: 0 auto;
+    margin-bottom: 58px;
+  }
+
+  .reviews-section__review-card {
+    margin: 0;
+  }
+
+  .reviews-section__author {
+    padding: 0;
+  }
+
+  .reviews-section__program-container {
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .reviews-section__program {
+    font-size: 14px;
+
+    &--colored {
+      color: $blue-color;
+    }
+  }
+
+  .reviews-section__description {
+    margin-bottom: 24px;
+  }
+
+  .reviews-section__social {
+    position: inherit;
+
+    margin-top: 24px;
+  }
+
+  .reviews-section__controls-container {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+
+    display: none;
+    width: 100px;
+
+    &--visible {
+      display: flex;
+    }
+
+    transform: translateX(-50%);
+  }
 }
