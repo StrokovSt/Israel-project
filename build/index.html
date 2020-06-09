@@ -324,7 +324,9 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
             </li>
           </ul>
           <div class="gallery-section__controls-container">
-            <button class="gallery-section__control gallery-section__control--left"></button>
+            <button class="gallery-section__control gallery-section__control--left">
+              <span class="visually-hidden">свайп влево</span>
+            </button>
             <ul class="gallery-section__slider-points">
               <li data-point="0" class="gallery-section__slider-point"></li>
               <li data-point="1" class="gallery-section__slider-point"></li>
@@ -332,7 +334,9 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
               <li data-point="3" class="gallery-section__slider-point"></li>
               <li data-point="4" class="gallery-section__slider-point"></li>
             </ul>
-            <button class="gallery-section__control gallery-section__control--right"></button>
+            <button class="gallery-section__control gallery-section__control--right">
+              <span class="visually-hidden">свайп вправо</span>
+            </button>
           </div>
         </section>
 
@@ -561,8 +565,12 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
             </ul>
             <div class="reviews-section__controls-container">
               <p class="reviews-section__control-count">3/6</p>
-              <button class="reviews-section__control reviews-section__control--left"></button>
-              <button class="reviews-section__control reviews-section__control--right"></button>
+              <button class="reviews-section__control reviews-section__control--left">
+                <span class="visually-hidden">свайп влево</span>
+              </button>
+              <button class="reviews-section__control reviews-section__control--right">
+                <span class="visually-hidden">свайп вправо</span>
+              </button>
             </div>
           </div>
         </section>
@@ -699,8 +707,12 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
         <button class="call-popup__close-button" type="button">
           <span class="visually-hidden">закрыть окно</span>
         </button>
+        <h2 class="call-popup__heading">Заказать звонок</h2>
+        <p class="call-popup__description">
+          Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня
+          и обязательно поможем найти ответ на ваш вопрос!
+        </p>
         <form class="call-popup__form" action="#" method="post">
-          <h2 class="call-popup__heading">Заказать звонок</h2>
           <fieldset class="call-popup__fieldset">
             <ul class="call-popup__list">
               <li class="call-popup__item">
@@ -709,13 +721,13 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
               </li>
               <li class="call-popup__item call-popup__item--req">
                 <label class="call-popup__label visually-hidden" for="call-popup-user-tel">Телефон:*</label>
-                <input class="call-popup__input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="+7 Введите 10 цифр номера" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required="">
+                <input class="call-popup__input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required="">
               </li>
             </ul>
           </fieldset>
           <button class="call-popup__button button" type="submit">Перезвоните мне</button>
-          <input type="checkbox" name="popup-consent" id="popup-consent" value="true">
-          <label class="call-popup__label visually-hidden" for="popup-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+          <input class="call-popup__checkbox visually-hidden" type="checkbox" name="popup-consent" id="popup-consent" value="true">
+          <label class="call-popup__label call-popup__label--consent" for="popup-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </form>
       </div>
     </template>
