@@ -1,4 +1,4 @@
-export const reviewsSlider = () => {
+export const reviewsController = () => {
   const sliderContainer = document.querySelector(`.reviews-section__slider`);
   const sliderItems = sliderContainer.querySelectorAll(`.reviews-section__slider-item`);
   const sliderControllers = sliderContainer.querySelector(`.reviews-section__controls-container`);

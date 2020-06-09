@@ -1,4 +1,4 @@
-export const questionsSwitch = () => {
+export const questionsController = () => {
   const questionsList = document.querySelector(`.questions-section__list`);
   const questionItems = questionsList.querySelectorAll(`.questions-section__item`);
 
