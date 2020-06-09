@@ -1,16 +1,17 @@
 .gallery-section__heading {
   @include main-heading;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 
   text-align: center;
 }
 
 .gallery-section__description {
-  max-width: 720px;
+  max-width: 725px;
   margin: 0 auto;
 
   text-align: center;
   font-size: $big-font-size;
+  line-height: $big-line-height;
 }
 
 .gallery-section__list {
@@ -80,6 +81,7 @@
   margin: 0;
 
   font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
   font-size: 21px;
   font-weight: 800;
   color: #ffffff;
@@ -170,9 +172,11 @@
 
   .gallery-section__description {
     margin: 0 auto;
+    margin-bottom: 10px;
 
     text-align: left;
     font-size: 16px;
+    line-height: 160%;
   }
 
   .gallery-section__list {

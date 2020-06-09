@@ -4,14 +4,14 @@
 .headline-section {
   display: flex;
   justify-content: center;
-  min-height: 826px;
+  min-height: 809px;
 }
 
 .headline-section__description {
   width: 350px;
   margin: 0;
   padding: 0;
-  padding-top: 460px;
+  padding-top: 451px;
 
   text-align: center;
   font-size: $h3-mini-size;
@@ -32,7 +32,7 @@
 
   .headline-section__description {
     max-width: 288px;
-    padding-top: 270px;
+    padding-top: 265px;
 
     font-size: 20px;
   }

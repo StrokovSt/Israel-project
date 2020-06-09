@@ -9,13 +9,14 @@
     content: "";
 
     position: absolute;
-    top: -80px;
+    top: -85px;
 
     display: block;
     height: 906px;
     width: 1367px;
 
-    background-image: url("../img/Group.png");
+    background-image: url("../img/background-desktop-headline.jpg");
+
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -26,7 +27,7 @@
 .page-main__about-program-section {
   position: relative;
 
-  margin-bottom: 200px;
+  margin-bottom: 213px;
 
   &::after {
     content: "";
@@ -75,7 +76,7 @@
   position: relative;
 
   margin: 0;
-  margin-bottom: 160px;
+  margin-bottom: 163px;
 
   &::before {
     content: "";
@@ -98,7 +99,7 @@
 
 .page-main__conditions-section {
   position: relative;
-  margin-bottom: 160px;
+  margin-bottom: 171px;
 
   &::after {
     content: "";
@@ -122,7 +123,7 @@
 .page-main__gallery-section {
   position: relative;
 
-  margin-bottom: 280px;
+  margin-bottom: 270px;
 
   &::after {
     content: "";
@@ -147,7 +148,7 @@
 .page-main__exposition-section {
   position: relative;
 
-  margin-bottom: 290px;
+  margin-bottom: 332px;
 
   &::after {
     content: "";
@@ -172,7 +173,7 @@
 .page-main__questions-section {
   position: relative;
 
-  margin-bottom: 130px;
+  margin-bottom: 152px;
 
   &::before {
     content: "";
@@ -216,7 +217,7 @@
 .page-main__reviews-section {
   position: relative;
 
-  margin-bottom: 110px;
+  margin-bottom: 86px;
 
   &::after {
     content: "";
@@ -281,10 +282,10 @@
 
 @media (max-width: $desktop-width) {
   .page-main__headline-section {
-    margin-bottom: 45px;
+    margin-bottom: 59px;
 
     &::after {
-      top: -40px;
+      top: -27px;
 
       display: block;
       height: 587px;
@@ -338,7 +339,7 @@
 
 @media (max-width: $tablet-width) {
   .page-main__about-program-section {
-    margin-bottom: 80px;
+    margin-bottom: 88px;
 
     &::after {
       top: 185px;
@@ -379,7 +380,7 @@
   }
 
   .page-main__conditions-section {
-    margin-bottom: 80px;
+    margin-bottom: 73px;
   }
 
   .page-main__exposition-section {

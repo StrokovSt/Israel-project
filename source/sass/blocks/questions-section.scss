@@ -3,13 +3,14 @@
 
   background-image: url("../img/desktop-questions.png");
   background-position: 100% 0;
-  background-size: 40%;
+  background-size: 47%;
   background-repeat: no-repeat;
 }
 
 .questions-section__heading {
   @include main-heading;
   padding-left: 110px;
+  margin-bottom: 13px;
 }
 
 .questions-section__list {
@@ -24,7 +25,9 @@
   position: relative;
 
   width: 45%;
-  padding: 32px 0;
+  padding: 0;
+  padding-top: 38px;
+  padding-bottom: 32px;
 
   font-size: $big-font-size;
 
@@ -66,8 +69,8 @@
 .questions-section__item-button {
   position: absolute;
 
-  top: 32px;
-  right: 5%;
+  top: 37px;
+  right: 7.6%;
 
   display: inline-block;
   padding: 5px;
@@ -105,6 +108,7 @@
   }
 
   .questions-section__heading {
+    margin: 0;
     padding: 0;
 
     font-size: $h2-mini-size;
@@ -119,7 +123,9 @@
     position: relative;
 
     width: 100%;
-    padding: 32px 0;
+    padding: 0;
+    padding-top: 38px;
+    padding-bottom: 24px;
 
     font-size: $big-font-size;
 
@@ -139,7 +145,7 @@
     position: absolute;
 
     top: 32px;
-    right: 5%;
+    right: 0;
 
     display: inline-block;
     padding: 5px;
@@ -163,6 +169,7 @@
     margin: 0;
     margin-top: 24px;
 
+    font-size: 14px;
     opacity: 0.72;
   }
 }

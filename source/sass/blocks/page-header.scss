@@ -58,13 +58,13 @@
 
 @media (max-width: $tablet-width) {
   .page-header__container {
-    margin-top: 20px;
-    padding: 0 12px;
+    padding: 0;
     padding-top: 20px;
   }
 
   .page-header__list {
     flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-height: 48px;
   }

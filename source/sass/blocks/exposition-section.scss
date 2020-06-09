@@ -4,7 +4,7 @@
   align-items: flex-start;
   width: 400px;
   margin-left: auto;
-  margin-right: 10%;
+  margin-right: 12.6%;
 }
 
 .exposition-section__heading {
@@ -24,8 +24,28 @@
 }
 
 .exposition-section__button {
+  position: relative;
+
   @include button;
   width: 230px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 20px;
+    top: 50%;
+
+    width: 24px;
+    height: 24px;
+
+    background-image: url("../img/instagram.png");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    transform: translateY(-50%);
+  }
 }
 
 /* ----------------- Разметкdа под mobile ----------------- */
@@ -44,7 +64,7 @@
   }
 
   .exposition-section__heading {
-    margin-bottom: 96px;
+    margin-bottom: 90px;
 
     font-size: 40px;
   }
@@ -52,7 +72,7 @@
   .exposition-section__description {
     width: 90%;
     min-height: 135px;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
 
     font-size: 16px;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);

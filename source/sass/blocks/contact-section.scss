@@ -1,6 +1,6 @@
 .contact-section {
   max-width: 1226px;
-  min-height: 594px;
+  min-height: 653px;
   padding-left: 70px;
   margin-left: auto;
 
@@ -12,14 +12,14 @@
 
 .contact-section__heading {
   @include main-heading;
-  padding-top: 210px;
+  padding-top: 240px;
 }
 
 .contact-section__description {
   width: 35%;
   margin: 0;
-  margin-top: 24px;
-  margin-bottom: 60px;
+  margin-top: 22px;
+  margin-bottom: 65px;
 
   font-size: $big-font-size;
   line-height: $big-line-height;
@@ -71,7 +71,7 @@
 
 .contact-section__button {
   position: absolute;
-  left: 340px;
+  left: 332px;
 
   width: 216px;
 }
@@ -103,6 +103,7 @@
 @media (max-width: $tablet-width) {
   .contact-section {
     padding: 0 16px;
+    min-height: 598px;
 
     background: none;
 
@@ -160,5 +161,7 @@
 
   .contact-section__button {
     position: inherit;
+
+    width: 264px;
   }
 }

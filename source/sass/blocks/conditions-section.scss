@@ -12,7 +12,7 @@
 
 .conditions-section__container {
   width: 50%;
-  padding-left: 90px;
+  padding-left: 85px;
 }
 
 .conditions-section__heading {
@@ -25,7 +25,10 @@
   position: relative;
 
   max-width: 480px;
+  margin: 0;
   margin-bottom: 32px;
+
+  line-height: $big-line-height;
 
   &--aftermath {
     max-width: 536px;
@@ -51,8 +54,8 @@
 
 .conditions-section__condition {
   display: block;
-  max-width: 480px;
-  margin-bottom: 30px;
+  max-width: 460px;
+  margin-bottom: 33px;
 
   font-size: $big-font-size;
   line-height: $big-line-height;
@@ -64,6 +67,7 @@
   position: relative;
 
   margin: 0;
+  margin-bottom: 45px;
   padding: 0;
 
   list-style: none;
@@ -73,7 +77,7 @@
 
     position: absolute;
     top: 5px;
-    left: 18px;
+    left: 0;
 
     display: block;
     height: 90%;
@@ -92,14 +96,22 @@
   position: relative;
 
   max-width: 480px;
-  padding-left: 60px;
-  margin-bottom: 48px;
+  padding-left: 45px;
+  margin-bottom: 40px;
+
+  &:first-child {
+    margin-bottom: 54px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &::after {
     content: "";
 
     position: absolute;
-    left: 0;
+    left: -15px;
     top: 50%;
 
     display: block;
@@ -116,12 +128,12 @@
     content: "";
 
     position: absolute;
-    left: 14px;
+    left: -1px;
     top: 50%;
 
     font-family: "Fira Sans", "Arial", sans-serif;
-    font-size: $regular-font-size;
-    line-height: $regular-line-height;
+    font-size: $big-font-size;
+    line-height: $big-line-height;
     font-weight: bold;
     color: $yellow-color;
 
@@ -177,7 +189,7 @@
 
   .conditions-section__description {
     margin: 0 auto;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 
     font-size: 14px;
 
@@ -189,7 +201,7 @@
 
   .conditions-section__condition {
     margin: 0 auto;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
 
     font-size: 16px;
   }
@@ -198,5 +210,22 @@
     max-width: 480px;
 
     margin: 0 auto;
+    margin-bottom: 14px;
+
+    &::after {
+      left: 9px;
+    }
+  }
+
+  .conditions-section__item {
+    padding-left: 39px;
+
+    &::after {
+      left: -8px;
+    }
+
+    &::before {
+      left: 6px;
+    }
   }
 }
