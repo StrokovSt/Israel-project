@@ -9,24 +9,30 @@
     content: "";
 
     position: absolute;
-    top: -80px;
+    top: -85px;
 
     display: block;
     height: 906px;
     width: 1367px;
 
-    background-image: url("../img/Group.png");
+    background-image: url("../img/background-desktop-headline.jpg");
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-headline.webp");
+    }
   }
 }
 
 .page-main__about-program-section {
   position: relative;
 
-  margin-bottom: 200px;
+  margin-bottom: 213px;
 
   &::after {
     content: "";
@@ -46,6 +52,12 @@
     background-repeat: no-repeat;
     transform: translate(-50%);
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-about_program-watercolor.webp");
+    }
   }
 }
 
@@ -69,13 +81,19 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-programs-watercolor.webp");
+    }
+  }
 }
 
 .page-main__contact-section {
   position: relative;
 
   margin: 0;
-  margin-bottom: 160px;
+  margin-bottom: 163px;
 
   &::before {
     content: "";
@@ -94,11 +112,17 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-contact-watercolor.webp");
+    }
+  }
 }
 
 .page-main__conditions-section {
   position: relative;
-  margin-bottom: 160px;
+  margin-bottom: 171px;
 
   &::after {
     content: "";
@@ -117,12 +141,18 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-conditions-watercolor.webp");
+    }
+  }
 }
 
 .page-main__gallery-section {
   position: relative;
 
-  margin-bottom: 280px;
+  margin-bottom: 270px;
 
   &::after {
     content: "";
@@ -142,12 +172,18 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-gallery-watercolor.webp");
+    }
+  }
 }
 
 .page-main__exposition-section {
   position: relative;
 
-  margin-bottom: 290px;
+  margin-bottom: 332px;
 
   &::after {
     content: "";
@@ -167,12 +203,18 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-exposition.webp");
+    }
+  }
 }
 
 .page-main__questions-section {
   position: relative;
 
-  margin-bottom: 130px;
+  margin-bottom: 152px;
 
   &::before {
     content: "";
@@ -211,12 +253,22 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::before {
+      background-image: url("../img/background-desktop-bag-watercolor.webp");
+    }
+
+    &::after {
+      background-image: url("../img/background-desktop-questions-watercolor.webp");
+    }
+  }
 }
 
 .page-main__reviews-section {
   position: relative;
 
-  margin-bottom: 110px;
+  margin-bottom: 86px;
 
   &::after {
     content: "";
@@ -235,6 +287,12 @@
     background-repeat: no-repeat;
     transform: translateX(-50%);
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-reviews-watercolor.webp");
+    }
   }
 }
 
@@ -261,6 +319,12 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-details-watercolor.webp");
+    }
+  }
 }
 
 @media (min-width: $big-desktop-width) {
@@ -281,10 +345,10 @@
 
 @media (max-width: $desktop-width) {
   .page-main__headline-section {
-    margin-bottom: 45px;
+    margin-bottom: 59px;
 
     &::after {
-      top: -40px;
+      top: -27px;
 
       display: block;
       height: 587px;
@@ -294,6 +358,12 @@
       background-position: center;
       background-size: auto;
       background-repeat: no-repeat;
+    }
+
+    &--webp-on {
+      &::after {
+        background-image: url("../img/background-mobile-headline.webp");
+      }
     }
   }
 
@@ -338,7 +408,7 @@
 
 @media (max-width: $tablet-width) {
   .page-main__about-program-section {
-    margin-bottom: 80px;
+    margin-bottom: 88px;
 
     &::after {
       top: 185px;
@@ -379,7 +449,7 @@
   }
 
   .page-main__conditions-section {
-    margin-bottom: 80px;
+    margin-bottom: 73px;
   }
 
   .page-main__exposition-section {
@@ -408,6 +478,12 @@
       width: 100vw;
 
       background-image: url("../img/background-mobile-reviews-watercolor.png");
+    }
+
+    &--webp-on {
+      &::after {
+        background-image: url("../img/background-mobile-reviews-watercolor.webp");
+      }
     }
   }
 }

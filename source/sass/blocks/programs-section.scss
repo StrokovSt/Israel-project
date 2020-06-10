@@ -16,6 +16,8 @@
 
   margin-bottom: 80px;
   margin-left: auto;
+
+  letter-spacing: 0.05em;
 }
 
 .programs-section__nav-list {
@@ -41,7 +43,7 @@
   &::before {
     position: absolute;
     top: -50%;
-    right: -68px;
+    right: -38px;
 
     content: "";
     display: block;
@@ -58,7 +60,7 @@
 
     content: "";
     display: block;
-    width: 100%;
+    width: 87%;
     height: 68px;
     z-index: -1;
   }
@@ -118,7 +120,7 @@
 
 .programs-section__slide-list {
   margin: 0;
-  margin-left: 100px;
+  margin-left: 65px;
   margin-right: auto;
   padding: 0;
 
@@ -132,8 +134,18 @@
 
 .programs-section__slide-head {
   @include main-heading;
+
+  margin-bottom: 24px;
+
   font-size: $h3-size;
   text-transform: none;
+}
+
+.programs-section__slide-description {
+  margin: 0;
+  padding: 0;
+
+  line-height: $big-line-height;
 }
 
 .programs-section__slider--general:checked ~ .programs-section__slide-list .programs-section__slide--general,
@@ -165,7 +177,7 @@
 
   .programs-section__nav-list {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     overflow-x: scroll;
 
@@ -203,6 +215,16 @@
     }
   }
 
+  .programs-section__slider--general:checked ~ .programs-section__nav-list .programs-section__nav-heading--general,
+  .programs-section__slider--academic:checked ~ .programs-section__nav-list .programs-section__nav-heading--academic,
+  .programs-section__slider--internship:checked ~ .programs-section__nav-list .programs-section__nav-heading--internship,
+  .programs-section__slider--volunteering:checked ~ .programs-section__nav-list .programs-section__nav-heading--volunteering,
+  .programs-section__slider--religious:checked ~ .programs-section__nav-list .programs-section__nav-heading--religious {
+    font-size: 15px;
+    font-weight: 400;
+    font-variant: small-caps;
+  }
+
   .programs-section__nav-heading {
     margin-left: 8px;
     font-size: 16px;
@@ -214,6 +236,7 @@
 
   .programs-section__slide-head {
     font-size: $h3-mini-size;
+    margin-bottom: 16px;
   }
 
   .programs-section__slide-description {

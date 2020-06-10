@@ -13,6 +13,7 @@
 
 .about-program-section__heading {
   @include main-heading;
+  letter-spacing: 0.05em;
 }
 
 .about-program-section__description {
@@ -23,6 +24,7 @@
 
   text-align: center;
   font-size: $big-font-size;
+  line-height: $big-line-height;
 }
 
 .about-program-section__link {

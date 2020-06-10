@@ -10,14 +10,14 @@
 
 .details-section__heading {
   @include main-heading;
-  margin-bottom: 48px;
+  margin-bottom: 45px;
 }
 
 .details-section__label {
   position: relative;
 
-  margin-right: 16px;
-  padding-left: 18px;
+  margin-right: 13px;
+  padding-left: 22px;
 
   opacity: 0.74;
 
@@ -74,11 +74,12 @@
 }
 
 .details-section__curator-personal-data {
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .details-section__curator-info {
   display: flex;
+  margin-bottom: 12px;
 }
 
 .details-section__curator {
@@ -95,6 +96,10 @@
 }
 
 .details-section__curator-adress {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+
   font-size: $small-font-size;
   max-width: 240px;
 }
@@ -108,7 +113,7 @@
 }
 
 .details-section__social-item {
-  margin-right: 12px;
+  margin-right: 10px;
 
   &:last-child {
     margin-right: 0;
@@ -136,7 +141,7 @@
   max-width: 480px;
   margin: 0;
   margin-top: 30px;
-  margin-bottom: 130px;
+  margin-bottom: 136px;
   padding: 0;
 
   font-size: $big-font-size;
@@ -191,6 +196,8 @@
 
 .details-section__feedback-container {
   max-width: 364px;
+  margin-right: 13px;
+  line-height: $regular-line-height;
 }
 
 .details-section__feedback-attraction {

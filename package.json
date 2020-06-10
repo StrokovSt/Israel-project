@@ -23,6 +23,8 @@
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
+    "modernizr": "^3.11.2",
+    "modernizr-webpack-plugin": "^1.0.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
@@ -55,6 +57,7 @@
     "node": "8.15"
   },
   "dependencies": {
+    "blazy": "^1.8.2",
     "del": "^4.1.1",
     "focus-trap": "^5.1.0"
   }
