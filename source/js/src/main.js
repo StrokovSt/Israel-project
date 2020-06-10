@@ -5,12 +5,6 @@ import {popupController} from "./controllers/popup-controller.js";
 import {webpController} from "./controllers/webp-controller.js";
 import {yandexMapController} from "./controllers/yandex-map.js";
 
-import Blazy from "blazy";
-
-const bLazy = new Blazy({
-  selector: 'img' // all images
-});
-
 webpController();
 
 // call-popup

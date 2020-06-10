@@ -16,11 +16,16 @@
     width: 1367px;
 
     background-image: url("../img/background-desktop-headline.jpg");
-
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-headline.webp");
+    }
   }
 }
 
@@ -48,6 +53,12 @@
     transform: translate(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-about_program-watercolor.webp");
+    }
+  }
 }
 
 .page-main__programs-section {
@@ -69,6 +80,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-programs-watercolor.webp");
+    }
   }
 }
 
@@ -95,6 +112,12 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-contact-watercolor.webp");
+    }
+  }
 }
 
 .page-main__conditions-section {
@@ -117,6 +140,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-conditions-watercolor.webp");
+    }
   }
 }
 
@@ -143,6 +172,12 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-gallery-watercolor.webp");
+    }
+  }
 }
 
 .page-main__exposition-section {
@@ -167,6 +202,12 @@
     background-repeat: no-repeat;
     transform: translateX(-50%);
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-exposition.webp");
+    }
   }
 }
 
@@ -212,6 +253,16 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::before {
+      background-image: url("../img/background-desktop-bag-watercolor.webp");
+    }
+
+    &::after {
+      background-image: url("../img/background-desktop-questions-watercolor.webp");
+    }
+  }
 }
 
 .page-main__reviews-section {
@@ -237,6 +288,12 @@
     transform: translateX(-50%);
     z-index: -1;
   }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-reviews-watercolor.webp");
+    }
+  }
 }
 
 .page-main__details-section {
@@ -261,6 +318,12 @@
     background-repeat: no-repeat;
     transform: translateX(-50%);
     z-index: -1;
+  }
+
+  &--webp-on {
+    &::after {
+      background-image: url("../img/background-desktop-details-watercolor.webp");
+    }
   }
 }
 
@@ -295,6 +358,12 @@
       background-position: center;
       background-size: auto;
       background-repeat: no-repeat;
+    }
+
+    &--webp-on {
+      &::after {
+        background-image: url("../img/background-mobile-headline.webp");
+      }
     }
   }
 
@@ -409,6 +478,12 @@
       width: 100vw;
 
       background-image: url("../img/background-mobile-reviews-watercolor.png");
+    }
+
+    &--webp-on {
+      &::after {
+        background-image: url("../img/background-mobile-reviews-watercolor.webp");
+      }
     }
   }
 }

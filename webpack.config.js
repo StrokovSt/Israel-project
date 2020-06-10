@@ -1,12 +1,11 @@
-const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 const path = require(`path`);
 
 module.exports = {
   mode: `development`,
-  entry: `./source/js/main.js`,
+  entry: `./source/js/src/main.js`,
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `build`)
+    path: path.join(__dirname, `source/js`)
   },
   devtool: `source-map`,
   devServer: {
@@ -15,14 +14,11 @@ module.exports = {
   },
   module: {
     rules: [{test: /\.(png|jpe?g|gif|svg|ico|mp3|ogg|mp4|webm)$/,
-             loader: 'file-loader',
-             options: {name: 'media/[name].[ext]'}},
+            loader: 'file-loader',
+            options: {name: 'media/[name].[ext]'}},
             { test: /\.css$/, loader: 'style-loader!css-loader' },
             { test: /\.html$/, loader: 'html-loader',
               options: {minimize: true, attrs: 'img:src link:href source:src'} }
     ]
-  },
-  plugins: [
-    new ModernizrWebpackPlugin()
-  ]
+  }
 };
