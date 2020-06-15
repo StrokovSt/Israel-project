@@ -5,20 +5,28 @@
 .page-main__headline-section {
   position: relative;
 
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  background-image: url("../img/background-desktop-headline.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   &::after {
     content: "";
 
     position: absolute;
     top: -85px;
 
-    display: block;
+    display: none;
     height: 906px;
     width: 1367px;
 
-    background-image: url("../img/background-desktop-headline.jpg");
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
+
+
+
+
     z-index: -1;
   }
 
@@ -42,7 +50,7 @@
     left: 50%;
     right: 0;
 
-    display: block;
+    display: none;
     width: 1366px;
     height: 604px;
 
@@ -71,7 +79,7 @@
     top: -50px;
     right: -100px;
 
-    display: block;
+    display: none;
     height: 426px;
     width: 680px;
 
@@ -102,7 +110,7 @@
     top: 200px;
     left: -12vw;
 
-    display: block;
+    display: none;
     height: 262px;
     width: 147px;
 
@@ -131,7 +139,7 @@
     top: -200px;
     left: -20px;
 
-    display: block;
+    display: none;
     height: 1208px;
     width: 1487px;
 
@@ -161,7 +169,7 @@
     top: -30px;
     left: 50%;
 
-    display: block;
+    display: none;
     height: 950px;
     width: 100vw;
 
@@ -192,7 +200,7 @@
     top: -130px;
     left: 50%;
 
-    display: block;
+    display: none;
     height: 583px;
     width: 100vw;
 
@@ -223,7 +231,7 @@
     top: 600px;
     left: 20px;
 
-    display: block;
+    display: none;
     height: 177px;
     width: 194px;
 
@@ -242,7 +250,7 @@
     top: -110px;
     left: 50%;
 
-    display: block;
+    display: none;
     height: 1119px;
     width: 100vw;
 
@@ -277,7 +285,7 @@
     top: 0;
     left: 50%;
 
-    display: block;
+    display: none;
     height: 100vh;
     width: 100vw;
 
@@ -308,7 +316,7 @@
     top: -110px;
     left: 50%;
 
-    display: block;
+    display: none;
     height: 94vh;
     width: 100vw;
 
@@ -350,7 +358,7 @@
     &::after {
       top: -27px;
 
-      display: block;
+      display: none;
       height: 587px;
       width: 100vw;
 
@@ -427,7 +435,7 @@
       top: 110px;
       right: -10px;
 
-      display: block;
+      display: none;
       height: 201px;
       width: 320px;
     }
@@ -440,6 +448,7 @@
     margin-bottom: 80px;
 
     &::before {
+      display: none;
       top: -40px;
       left: -50px;
 

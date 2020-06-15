@@ -33,6 +33,10 @@
 .contact-section__fieldset {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin: 0;
   padding: 0;
 
@@ -41,32 +45,20 @@
 
 .contact-section__input {
   width: 420px;
-  height: 60px;
-  margin: 0;
-  padding: 0;
-  padding-left: 40px;
+}
 
-  font-family: "Fira Sans", "Arial", sans-serif;
-  font-size: $big-font-size;
-  text-transform: none;
-  font-weight: 500;
-  border: 1px solid #e3e3e3;
-  border-radius: 30px;
-  outline: none;
-  transition: 0.2s ease all;
+.contact-section__input-error {
+  max-width: 220px;
+  margin: 0 auto;
+  margin-top: 5px;
 
-  &:hover,
-  &:focus {
-    border-color: $gradient-yellow-color;
-  }
+  text-align: center;
+  color: red;
+  font-size: 11px;
+  line-height: 12px;
 
-  &::-webkit-input-placeholder {
-    color: #999999;
-  }
-
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
-  }
+  transition: 0.5s ease all;
+  opacity: 0;
 }
 
 .contact-section__button {
@@ -106,25 +98,6 @@
     min-height: 598px;
 
     background: none;
-
-    &::after {
-      content: "";
-
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-
-      display: block;
-      height: 308px;
-      width: 424px;
-
-      background-image: url("../img/background-mobile-contact.png");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      transform: translateX(-50%);
-      z-index: -1;
-    }
   }
 
   .contact-section__heading {

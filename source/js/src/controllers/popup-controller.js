@@ -1,3 +1,5 @@
+import Inputmask from "inputmask";
+
 export const popupController = () => {
   const mainSection = document.querySelector(`main`);
   const callLink = document.querySelector(`.page-header__link--order`);
@@ -15,6 +17,37 @@ export const popupController = () => {
     const popupCall = document.querySelector(`.call-popup`);
     const closeButton = popupCall.querySelector(`.call-popup__close-button`);
     const popupForm = document.querySelector(`.call-popup__form`);
+    const callInput = document.getElementById(`call-popup-user-tel`);
+    const userNameInput = document.getElementById(`call-popup-user-name`);
+    const popupCheckbox = popupCall.querySelector(`.call-popup__checkbox`);
+
+    userNameInput.focus();
+
+    Inputmask({
+      mask: "+7 (999) 999 99 99",
+      greedy: false,
+    }).mask(callInput);
+
+    callInput.addEventListener("input", function () {
+      const inputValidity = callInput.validity.patternMismatch;
+      if (!inputValidity) {
+        callInput.setCustomValidity("");
+      } else {
+        callInput.setCustomValidity("Введите номер телефона");
+      }
+    });
+
+    popupCheckbox.setCustomValidity("Необходимо подтвердить согласие на обработку персональных данных");
+
+    popupCheckbox.addEventListener("change", function () {
+      const сheckboxValidity = callInput.validity.valid;
+      if (!сheckboxValidity) {
+        popupCheckbox.setCustomValidity("Необходимо подтвердить согласие на обработку персональных данных");
+      } else {
+        popupCheckbox.setCustomValidity("");
+      }
+    });
+
 
     document.body.style.overflow = `hidden`;
 
@@ -38,11 +71,14 @@ export const popupController = () => {
   const onPopupResultSubmit = (evt) => {
     evt.preventDefault();
     const popupCall = document.querySelector(`.call-popup`);
-    const popupResult = document.querySelector(`.result-popup`);
+    const popupResult = popupCall.querySelector(`.result-popup`);
+
     popupCall.remove();
+
     if (!popupResult) {
       addResultPopup();
     }
+
     document.removeEventListener(`click`, onPopupResultSubmit);
   };
 

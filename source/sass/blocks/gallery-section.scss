@@ -16,10 +16,10 @@
 
 .gallery-section__list {
   display: inline-grid;
-  grid-template-columns: minmax(420px, 482px) minmax(125px, 200px) minmax(125px, 200px) minmax(125px, 200px);
+  grid-template-columns: minmax(420px, 482px) minmax(125px, 211px) minmax(125px, 200px) minmax(125px, 200px);
   grid-template-rows: repeat(2, 356px);
   align-items: end;
-  justify-items: end;
+  justify-items: center;
   justify-content: center;
   grid-gap: 0 20px;
   width: 100%;

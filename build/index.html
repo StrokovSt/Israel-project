@@ -239,7 +239,8 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
           <form class="contact-section__form" action="#" method="post">
             <fieldset class="contact-section__fieldset">
               <label class="contact-section__label visually-hidden" for="contact-section-user-tel">Телефон:*</label>
-              <input class="contact-section__input contact-section__input--req" type="tel" name="contact-section-user-tel" id="contact-section-user-tel" placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required="">
+              <input class="contact-section__input input" type="tel" name="contact-section-user-tel" id="contact-section-user-tel" placeholder="ТЕЛЕФОН" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}" required="">
+              <span class="contact-section__input-error input-error">Введите телефон в формате <br> +7 (123) 456 78 90</span>
             </fieldset>
             <button class="contact-section__button button" type="submit">Перезвоните мне</button>
           </form>
@@ -659,11 +660,13 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
                 <ul class="details-section__list">
                   <li class="details-section__item">
                     <label class="visually-hidden" for="details-section-user-name">Ваше имя:</label>
-                    <input class="details-section__input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ" required="">
+                    <input class="details-section__input input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ" pattern="^[А-Яа-яЁё\s]+$" required="">
+                    <span class="details-section__input-error input-error">Введите имя русскими буквами</span>
                   </li>
                   <li class="details-section__item">
                     <label class="visually-hidden" for="details-section-user-tel">Ваш телефон:</label>
-                    <input class="details-section__input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="+7 (923) 41" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required="">
+                    <input class="details-section__input input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="ТЕЛЕФОН" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}" required="">
+                    <span class="details-section__input-error input-error">Введите телефон в формате <br> +7 (123) 456 78 90</span>
                   </li>
                 </ul>
               </fieldset>
@@ -726,17 +729,21 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
             <ul class="call-popup__list">
               <li class="call-popup__item">
                 <label class="call-popup__label visually-hidden" for="call-popup-user-name">Ваше имя:</label>
-                <input class="call-popup__input questions-section__input--req" type="tel" name="call-popup-user-name" id="call-popup-user-name" placeholder="ИМЯ" required="">
+                <input class="call-popup__input input" type="tel" name="call-popup-user-name" id="call-popup-user-name" placeholder="ИМЯ" pattern="^[А-Яа-яЁё\s]+$" required="">
+                <span class="call-popup__input-error input-error">Введите имя русскими буквами</span>
               </li>
               <li class="call-popup__item call-popup__item--req">
                 <label class="call-popup__label visually-hidden" for="call-popup-user-tel">Телефон:*</label>
-                <input class="call-popup__input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required="">
+                <input class="call-popup__input input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="ТЕЛЕФОН" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}" required="">
+                <span class="call-popup__input-error input-error">Введите телефон в формате <br> +7 (123) 456 78 90</span>
               </li>
             </ul>
           </fieldset>
-          <button class="call-popup__button button" type="submit">Перезвоните мне</button>
-          <input class="call-popup__checkbox visually-hidden" type="checkbox" name="popup-consent" id="popup-consent" value="true">
-          <label class="call-popup__label call-popup__label--consent" for="popup-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+          <input class="call-popup__button button" type="submit"><span class="visually-hidden">отправить</span>
+          <input class="call-popup__checkbox visually-hidden" type="checkbox" name="popup-consent" id="popup-consent" value="true" required="">
+          <label class="call-popup__label call-popup__label--consent" for="popup-consent">
+            Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+          </label>
         </form>
       </div>
     </template>
@@ -752,7 +759,7 @@ m-165 -125 c0 -25 -3 -29 -10 -18 -13 20 -13 50 0 50 6 0 10 -15 10 -32z m200
       </div>
     </template>
 
-    <script type="module" src="js/bundle.js"></script>
+    <script type="module" src="bundle.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU"></script>
 </body>
   
