@@ -146,6 +146,11 @@
   padding: 0;
 
   line-height: $big-line-height;
+
+  &--additional {
+    max-width: 510px;
+    margin-top: 17px;
+  }
 }
 
 .programs-section__slider--general:checked ~ .programs-section__slide-list .programs-section__slide--general,
