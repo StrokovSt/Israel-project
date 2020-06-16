@@ -3,38 +3,8 @@
 }
 
 .page-main__headline-section {
-  position: relative;
-
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-
-  background-image: url("../img/background-desktop-headline.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -85px;
-
-    display: none;
-    height: 906px;
-    width: 1367px;
-
-
-
-
-
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-headline.webp");
-    }
-  }
+  position: absolute;
+  top: -38px;
 }
 
 .page-main__about-program-section {
