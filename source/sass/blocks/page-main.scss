@@ -8,35 +8,7 @@
 }
 
 .page-main__about-program-section {
-  position: relative;
-
-  margin-bottom: 213px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 125px;
-    left: 50%;
-    right: 0;
-
-    display: none;
-    width: 1366px;
-    height: 604px;
-
-    background-image: url("../img/background-desktop-about_program-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translate(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-about_program-watercolor.webp");
-    }
-  }
+  margin-bottom: 98px;
 }
 
 .page-main__programs-section {
@@ -302,20 +274,6 @@
     &::after {
       background-image: url("../img/background-desktop-details-watercolor.webp");
     }
-  }
-}
-
-@media (min-width: $big-desktop-width) {
-  .page-main {
-    &::after {
-      top: 0;
-
-      height: 826px;
-    }
-  }
-
-  .page-main__about-program-section {
-    margin-top: 20px;
   }
 }
 
