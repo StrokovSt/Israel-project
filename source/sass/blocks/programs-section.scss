@@ -1,21 +1,32 @@
 .programs-section {
-  max-width: 1226px;
-  padding-left: 70px;
-  margin-left: auto;
+  background-image: url("../img/background-desktop-programs-watercolor.png");
+  background-position: 100% 3%;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &--webp-on {
+    background-image: url("../img/background-desktop-programs-watercolor.webp");
+  }
+}
+
+.programs-section > .container {
+  padding: 0;
 }
 
 .programs-section__container {
   display: flex;
   justify-content: space-between;
+  margin-left: 15.5%;
 }
 
 .programs-section__heading {
-  width: 100%;
+  width: 80%;
 
   @include main-heading;
 
   margin-bottom: 80px;
-  margin-left: auto;
+  margin-left: 15.5%;
+  padding-top: 50px;
 
   letter-spacing: 0.05em;
 }
@@ -120,7 +131,7 @@
 
 .programs-section__slide-list {
   margin: 0;
-  margin-left: 65px;
+  margin-left: 62px;
   margin-right: auto;
   padding: 0;
 
@@ -135,7 +146,7 @@
 .programs-section__slide-head {
   @include main-heading;
 
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   font-size: $h3-size;
   text-transform: none;

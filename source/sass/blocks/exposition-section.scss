@@ -1,3 +1,17 @@
+.exposition-section {
+  width: 100vw;
+  min-height: 585px;
+  margin-left: calc(-50vw + 50%);
+
+  background-image: url("../img/background-desktop-exposition.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--webp-on {
+    background-image: url("../img/background-desktop-exposition.webp");
+  }
+}
+
 .exposition-section__container {
   display: flex;
   flex-direction: column;
@@ -10,6 +24,9 @@
 .exposition-section__heading {
   @include main-heading;
   margin-bottom: 24px;
+  padding-top: 121px;
+
+  letter-spacing: 0;
 }
 
 .exposition-section__description {
@@ -17,10 +34,12 @@
   margin: 0;
   margin-bottom: 48px;
   padding: 0;
+  padding-left: 5px;
 
   font-size: $big-font-size;
-  line-height: $big-line-height;
+  line-height: 170%;
   color: #ffffff;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .exposition-section__button {
@@ -33,7 +52,7 @@
     content: "";
 
     position: absolute;
-    left: 20px;
+    left: 41px;
     top: 50%;
 
     width: 24px;
@@ -46,6 +65,12 @@
 
     transform: translateY(-50%);
   }
+}
+
+.exposition-section__button > span {
+  padding-left: 40px;
+
+  font-size: $big-font-size;
 }
 
 /* ----------------- Разметкdа под mobile ----------------- */

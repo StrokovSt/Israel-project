@@ -48,7 +48,6 @@ export const popupController = () => {
       }
     });
 
-
     document.body.style.overflow = `hidden`;
 
     deletePopup(popupCall, closeButton);

@@ -6,7 +6,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 
   min-height: 809px;
@@ -43,6 +43,7 @@
 .headline-section__description {
   width: 350px;
   margin: 0;
+  margin-top: 490px;
   margin-bottom: 32px;
   padding: 0;
 
@@ -60,7 +61,7 @@
   display: block;
   width: 76px;
   height: 76px;
-  margin-bottom: 150px;
+  margin-bottom: 0;
 
   border: 2px dashed #fff;
   border-radius: 50%;

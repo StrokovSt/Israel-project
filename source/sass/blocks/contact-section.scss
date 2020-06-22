@@ -1,25 +1,33 @@
-.contact-section {
-  max-width: 1226px;
+.contact-section > .container {
+  position: relative;
+
   min-height: 653px;
-  padding-left: 70px;
-  margin-left: auto;
+  padding: 0;
 
   background-image: url("../img/background-desktop-contact.png");
   background-position: right;
   background-size: auto;
   background-repeat: no-repeat;
+
+
+  &--webp-on {
+    background-image: url("../img/background-desktop-contact.webp");
+  }
 }
 
 .contact-section__heading {
   @include main-heading;
+  margin-left: 15.5%;
   padding-top: 240px;
+  letter-spacing: 0.02em;
 }
 
 .contact-section__description {
-  width: 35%;
+  width: 33%;
   margin: 0;
+  margin-left: 15.5%;
   margin-top: 22px;
-  margin-bottom: 65px;
+  margin-bottom: 63px;
 
   font-size: $big-font-size;
   line-height: $big-line-height;
@@ -27,6 +35,9 @@
 }
 
 .contact-section__form {
+  position: relative;
+  margin-left: 15.5%;
+
   display: flex;
 }
 
@@ -63,7 +74,7 @@
 
 .contact-section__button {
   position: absolute;
-  left: 332px;
+  left: 260px;
 
   width: 216px;
 }

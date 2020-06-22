@@ -8,273 +8,44 @@
 }
 
 .page-main__about-program-section {
-  margin-bottom: 98px;
-}
-
-.page-main__programs-section {
-  position: relative;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -50px;
-    right: -100px;
-
-    display: none;
-    height: 426px;
-    width: 680px;
-
-    background-image: url("../img/background-desktop-programs-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-programs-watercolor.webp");
-    }
-  }
+  margin-bottom: 49px;
 }
 
 .page-main__contact-section {
-  position: relative;
-
-  margin: 0;
-  margin-bottom: 163px;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 200px;
-    left: -12vw;
-
-    display: none;
-    height: 262px;
-    width: 147px;
-
-    background-image: url("../img/background-desktop-contact-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-contact-watercolor.webp");
-    }
-  }
+  margin-bottom: 76px;
 }
 
 .page-main__conditions-section {
   position: relative;
-  margin-bottom: 171px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -200px;
-    left: -20px;
-
-    display: none;
-    height: 1208px;
-    width: 1487px;
-
-    background-image: url("../img/background-desktop-conditions-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-conditions-watercolor.webp");
-    }
-  }
+  margin-bottom: 152px;
 }
 
 .page-main__gallery-section {
   position: relative;
 
-  margin-bottom: 270px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -30px;
-    left: 50%;
-
-    display: none;
-    height: 950px;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-gallery-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-gallery-watercolor.webp");
-    }
-  }
+  margin-bottom: 126px;
 }
 
 .page-main__exposition-section {
   position: relative;
 
-  margin-bottom: 332px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -130px;
-    left: 50%;
-
-    display: none;
-    height: 583px;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-exposition.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-exposition.webp");
-    }
-  }
+  margin-bottom: 135px;
 }
 
 .page-main__questions-section {
   position: relative;
 
-  margin-bottom: 152px;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 600px;
-    left: 20px;
-
-    display: none;
-    height: 177px;
-    width: 194px;
-
-    background-image: url("../img/background-desktop-bag-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -110px;
-    left: 50%;
-
-    display: none;
-    height: 1119px;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-questions-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::before {
-      background-image: url("../img/background-desktop-bag-watercolor.webp");
-    }
-
-    &::after {
-      background-image: url("../img/background-desktop-questions-watercolor.webp");
-    }
-  }
+  margin-bottom: 32px;
 }
 
 .page-main__reviews-section {
   position: relative;
 
-  margin-bottom: 86px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    display: none;
-    height: 100vh;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-reviews-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-reviews-watercolor.webp");
-    }
-  }
+  margin-bottom: 108px;
 }
 
 .page-main__details-section {
   position: relative;
-
-  margin-bottom: 72px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -110px;
-    left: 50%;
-
-    display: none;
-    height: 94vh;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-details-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-details-watercolor.webp");
-    }
-  }
 }
 
 /* ----------------- Разметкdа под tablet ----------------- */

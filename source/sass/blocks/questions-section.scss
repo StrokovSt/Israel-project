@@ -1,22 +1,41 @@
 .questions-section {
-  min-height: 803px;
+  min-height: 900px;
+
+  background-image: url("../img/background-desktop-questions-watercolor.png");
+  background-position: 50% 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--webp-on {
+    background-image: url("../img/background-desktop-questions-watercolor.webp");
+  }
+}
+
+.questions-section  > .container {
+  padding: 0;
 
   background-image: url("../img/desktop-questions.png");
   background-position: 100% 0;
   background-size: 47%;
   background-repeat: no-repeat;
+
+  &--webp-on {
+    background-image: url("../img/desktop-questions.webp");
+  }
 }
 
 .questions-section__heading {
   @include main-heading;
+  letter-spacing: 0.02em;
   padding-left: 110px;
-  margin-bottom: 13px;
+  margin-bottom: 9px;
 }
 
 .questions-section__list {
   margin: 0;
   padding: 0;
   padding-left: 110px;
+  padding-bottom: 30px;
 
   counter-reset: myCounter;
 }
@@ -26,7 +45,7 @@
 
   width: 45%;
   padding: 0;
-  padding-top: 38px;
+  padding-top: 39px;
   padding-bottom: 32px;
 
   font-size: $big-font-size;
@@ -37,7 +56,7 @@
   &::before {
     position: absolute;
     left: 0;
-    top: 28px;
+    top: 34px;
 
     counter-increment: myCounter;
     content: counter(myCounter);
@@ -69,7 +88,7 @@
 .questions-section__item-button {
   position: absolute;
 
-  top: 37px;
+  top: 40px;
   right: 7.6%;
 
   display: inline-block;
@@ -91,9 +110,11 @@
 }
 
 .questions-section__item-description {
+  max-width: 480px;
   margin: 0;
-  margin-top: 24px;
+  margin-top: 27px;
 
+  font-size: $regular-font-size;
   opacity: 0.72;
 }
 
