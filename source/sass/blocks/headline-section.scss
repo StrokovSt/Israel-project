@@ -10,8 +10,6 @@
   align-items: center;
 
   min-height: 809px;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
 
   background: url("../img/background-desktop-headline.png") center no-repeat;
   background-size: cover;
@@ -119,13 +117,27 @@
 @media (max-width: $desktop-width) {
   .headline-section {
     display: flex;
-    justify-content: center;
-    min-height: 506px;
+    justify-content: flex-start;
+    min-height: 536px;
+
+    background: url("../img/background-mobile-headline.png") 50% 0 no-repeat;
+    background-size: auto;
+
+    &--webp-on {
+      background-image: url("../img/background-mobile-headline.webp");
+    }
+
+    &::after {
+      width: 300px;
+      height: 200px;
+    }
   }
 
   .headline-section__description {
     max-width: 288px;
-    padding-top: 265px;
+    margin: 0;
+    margin-bottom: 28px;
+    padding-top: 303px;
 
     font-size: 20px;
   }

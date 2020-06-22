@@ -4,9 +4,3 @@
   margin: 0 auto;
   padding: 0 112px;
 }
-
-@media (max-width: $desktop-width) {
-  .container {
-    min-width: $mobile-width;
-  }
-}

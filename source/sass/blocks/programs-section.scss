@@ -182,10 +182,13 @@
 
   .programs-section__container {
     display: block;
+    margin: 0;
   }
 
   .programs-section__heading {
+    margin: 0;
     margin-bottom: 16px;
+    padding-left: 30px;
 
     text-align: center;
     font-size: $h2-mini-size;
@@ -193,7 +196,7 @@
 
   .programs-section__nav-list {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 
     overflow-x: scroll;
 
@@ -247,17 +250,20 @@
   }
 
   .programs-section__slide-list {
+    max-width: 100%;
     margin: 0;
   }
 
   .programs-section__slide-head {
     font-size: $h3-mini-size;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
   .programs-section__slide-description {
     margin: 0;
+    margin-bottom: 14px;
 
     font-size: 14px;
+    line-height: 160%;
   }
 }

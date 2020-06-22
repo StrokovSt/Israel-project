@@ -168,7 +168,7 @@
   bottom: 0;
   left: 36.5%;
 
-  display: flex;
+  display: none;
   width: 100px;
 
   &--visible {
@@ -231,10 +231,6 @@
     text-align: center;
   }
 
-  .reviews-section__description {
-    min-height: 220px;
-  }
-
   .reviews-section__controls-container {
     position: absolute;
     bottom: 0;
@@ -277,7 +273,7 @@
     width: 240px;
     height: 320px;
     margin: 0 auto;
-    margin-bottom: 58px;
+    margin-bottom: 66px;
   }
 
   .reviews-section__review-card {
@@ -290,11 +286,12 @@
 
   .reviews-section__program-container {
     flex-wrap: wrap;
-    margin-bottom: 31px;
+    margin-bottom: 23px;
   }
 
   .reviews-section__program {
     font-size: 14px;
+    line-height: 160%;
 
     &--colored {
       color: $blue-color;
@@ -302,7 +299,15 @@
   }
 
   .reviews-section__description {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
+
+    font-size: 16px;
+    line-height: 165%;
+  }
+
+  .reviews-section__link {
+    margin-top: 7px;
+    margin-bottom: 0;
   }
 
   .reviews-section__social {

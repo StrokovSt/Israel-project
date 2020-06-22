@@ -52,34 +52,11 @@
 
 @media (max-width: $desktop-width) {
   .page-main__headline-section {
-    margin-bottom: 59px;
-
-    &::after {
-      top: -27px;
-
-      display: none;
-      height: 587px;
-      width: 100vw;
-
-      background-image: url("../img/background-mobile-headline.png");
-      background-position: center;
-      background-size: auto;
-      background-repeat: no-repeat;
-    }
-
-    &--webp-on {
-      &::after {
-        background-image: url("../img/background-mobile-headline.webp");
-      }
-    }
+    margin-bottom: 28px;
   }
 
   .page-main__conditions-section {
-    margin-bottom: 120px;
-
-    &::after {
-      display: none;
-    }
+    margin-bottom: 78px;
   }
 
   .page-main__contact-section {
@@ -87,11 +64,7 @@
   }
 
   .page-main__gallery-section {
-    margin-bottom: 120px;
-
-    &::after {
-      display: none;
-    }
+    margin-bottom: 0;
   }
 
   .page-main__exposition-section {
@@ -100,14 +73,10 @@
 
   .page-main__questions-section {
     margin-bottom: 80px;
-
-    &::after {
-      display: none;
-    }
   }
 
   .page-main__details-section {
-    margin-bottom: 64px;
+    margin-bottom: 51px;
   }
 }
 
@@ -115,83 +84,27 @@
 
 @media (max-width: $tablet-width) {
   .page-main__about-program-section {
-    margin-bottom: 88px;
-
-    &::after {
-      top: 185px;
-      left: 50%;
-
-      width: 100vw;
-      height: 186px;
-    }
+    margin-bottom: 31px;
   }
 
   .page-main__programs-section {
     margin: 0;
     margin-bottom: 80px;
-
-    &::after {
-      top: 110px;
-      right: -10px;
-
-      display: none;
-      height: 201px;
-      width: 320px;
-    }
   }
 
   .page-main__contact-section {
     position: relative;
 
     margin: 0;
-    margin-bottom: 80px;
-
-    &::before {
-      display: none;
-      top: -40px;
-      left: -50px;
-
-      height: 162px;
-      width: 120px;
-    }
-  }
-
-  .page-main__conditions-section {
-    margin-bottom: 73px;
   }
 
   .page-main__exposition-section {
     margin-bottom: 80px;
-
-    &::after {
-      top: 50px;
-      left: 50%;
-
-      height: 272px;
-      min-width: 632px;
-      width: 100vw;
-    }
   }
 
   .page-main__reviews-section {
     position: relative;
 
-    margin-bottom: 110px;
-
-    &::after {
-      top: 50%;
-      left: 50%;
-
-      height: 419px;
-      width: 100vw;
-
-      background-image: url("../img/background-mobile-reviews-watercolor.png");
-    }
-
-    &--webp-on {
-      &::after {
-        background-image: url("../img/background-mobile-reviews-watercolor.webp");
-      }
-    }
+    margin-bottom: 68px;
   }
 }

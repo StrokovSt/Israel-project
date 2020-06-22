@@ -95,10 +95,17 @@
 
 @media (max-width: $tablet-width) {
   .about-program-section {
+    min-height: 500px;
     padding: 0 16px;
 
-    background-image: url("../img/background-mobile-about_program.png");
-    background-size: auto;
+    background: url("../img/background-desktop-about_program-watercolor.png") 100% 215px no-repeat,
+                url("../img/background-mobile-about_program.png") 50% 100% no-repeat;
+    background-size: contain, auto;
+
+    &--webp-on {
+      background: url("../img/background-desktop-about_program-watercolor.webp") 3px 159px no-repeat,
+                  url("../img/background-mobile-about_program.webp") 50% 67% no-repeat;
+    }
   }
 
   .about-program-section__link {
@@ -107,7 +114,7 @@
     display: block;
     width: 54px;
     height: 54px;
-    margin-top: 130px;
+    margin-top: 136px;
     margin-bottom: 75px;
 
     &::after {
@@ -127,6 +134,7 @@
   }
 
   .about-program-section__description {
+    min-height: 189px;
     font-size: 16px;
     text-align: left;
   }

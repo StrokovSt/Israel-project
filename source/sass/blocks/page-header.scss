@@ -72,13 +72,23 @@
   }
 
   .page-header__item {
+    padding-left: 10px;
+
     &--logo {
+      margin-right: 5px;
+      padding: 0;
       order: -1;
     }
   }
 
   .page-header__link {
     font-size: 14px;
+
+    &--order {
+      display: block;
+      margin-left: 10px;
+      font-size: 13px;
+    }
   }
 
   .page-header__logo-image {
