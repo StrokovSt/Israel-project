@@ -61,18 +61,18 @@
   height: 76px;
   margin-bottom: 0;
 
-  border: 2px dashed #fff;
+  border: 2px dashed #ffffff;
   border-radius: 50%;
 
   transition: 0.1s ease all;
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 13px 0 #fff;
+    box-shadow: 0 0 13px 0 #ffffff;
   }
 
   &:active {
-    box-shadow: 0 0 26px 0 #fff;
+    box-shadow: 0 0 26px 0 #ffffff;
   }
 
   &::after {
@@ -86,7 +86,7 @@
     width: 54px;
     height: 54px;
 
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     border-radius: 50%;
 
     background-image: url("../img/mouse.png");
@@ -106,7 +106,7 @@
     display: block;
     width: 2px;
     height: 55px;
-    background-color: #fff;
+    background-color: #ffffff;
 
     transform: translateX(-50%);
   }

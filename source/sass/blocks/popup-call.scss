@@ -14,7 +14,7 @@
   padding-top: 56px;
   background-color: #ffffff;
   box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.75);
-  z-index: 1;
+  z-index: 2;
 }
 
 .call-popup__close-button {
@@ -90,14 +90,6 @@
   padding: 0;
 
   list-style: none;
-}
-
-.call-popup__item {
-  margin-bottom: 8px;
-
-  &:last-child {
-    margin-bottom: 24px;
-  }
 }
 
 .call-popup__input {

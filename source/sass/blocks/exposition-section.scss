@@ -1,7 +1,5 @@
 .exposition-section {
-  width: 100vw;
   min-height: 585px;
-  margin-left: calc(-50vw + 50%);
 
   background-image: url("../img/background-desktop-exposition.png");
   background-size: cover;
@@ -39,7 +37,7 @@
   font-size: $big-font-size;
   line-height: 170%;
   color: #ffffff;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 .exposition-section__button {
@@ -77,6 +75,24 @@
 
 @media (max-width: $desktop-width) {
   .exposition-section {
+    min-height: 600px;
+    padding: 0 16px;
+
+    background-image: url("../img/background-desktop-exposition.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+
+    &--webp-on {
+      background-image: url("../img/background-desktop-exposition.webp");
+    }
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: 626px) {
+  .exposition-section {
     min-height: 400px;
     padding: 0 16px;
 
@@ -107,6 +123,7 @@
 
   .exposition-section__description {
     width: 90%;
+    max-width: 350px;
     min-height: 135px;
     margin-bottom: 57px;
     padding: 0;

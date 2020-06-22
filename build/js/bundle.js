@@ -2887,41 +2887,22 @@ const galleryController = () => {
     });
   });
 
-  const slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
+  let slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
   sliderPoints[clickCount].classList.add(`gallery-section__slider-point--active`);
 
-  galleryControlsContainer.addEventListener(`click`, function (evt) {
-    const controlType = evt.target.classList.contains(`gallery-section__control--left`) ? `left` : `right`;
-    if (evt.target.tagName === `BUTTON` && controlType === `right`) {
-      clickCount += 1;
-      if (clickCount >= slides.length) {
-        clickCount = 0;
-      }
-    }
-
-    if (evt.target.tagName === `BUTTON` && controlType === `left`) {
-      clickCount -= 1;
-      if (clickCount < 0) {
-        clickCount = slides.length - 1;
-      }
-    }
-
+  galleryControlsContainer.addEventListener(`click`, function () {
     sliderPoints.forEach((item) => {
       item.classList.remove(`gallery-section__slider-point--active`);
     });
 
     sliderPoints[clickCount].classList.add(`gallery-section__slider-point--active`);
-
-    slides.forEach((item) => {
-      item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
-    });
   });
 
   sliderPointsContainer.addEventListener(`click`, function (evt) {
     if (evt.target.tagName === `LI`) {
       clickCount = evt.target.dataset.point;
       slides.forEach((item) => {
-        item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+        item.slide.style.transform = `translateX(` + (slideStep - 35) * clickCount + `px)`;
       });
     }
   });
@@ -2929,8 +2910,9 @@ const galleryController = () => {
   window.addEventListener(`resize`, function () {
     if (galleryContainer.offsetWidth < 1024) {
       showControls();
+      slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
       slides.forEach((item) => {
-        item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+        item.slide.style.transform = `translateX(` + (slideStep - 35) * clickCount + `px)`;
       });
     } else {
       galleryControlsContainer.classList.remove(`gallery-section__controls-container--on`);
@@ -2939,6 +2921,58 @@ const galleryController = () => {
       });
     }
   }, false);
+};
+
+
+/***/ }),
+
+/***/ "./source/js/src/controllers/input-controller.js":
+/*!*******************************************************!*\
+  !*** ./source/js/src/controllers/input-controller.js ***!
+  \*******************************************************/
+/*! exports provided: inputController */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "inputController", function() { return inputController; });
+/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/index.js");
+/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const inputController = () => {
+  const detailsSEctionForm = document.querySelector(`.details-section__feedback-form`);
+  const detailsSEctionInput = document.getElementById(`details-section-user-tel`);
+  const contactSectionForm = document.querySelector(`.contact-section__form`);
+  const contactSectionInput = document.getElementById(`contact-section-user-tel`);
+  new inputmask__WEBPACK_IMPORTED_MODULE_0___default.a(`+7 (999) 999 99 99`).mask(detailsSEctionInput);
+  new inputmask__WEBPACK_IMPORTED_MODULE_0___default.a(`+7 (999) 999 99 99`).mask(contactSectionInput);
+
+  detailsSEctionForm.addEventListener(`submit`, function () {
+    detailsSEctionForm.reset();
+  });
+
+  contactSectionForm.addEventListener(`submit`, function () {
+    contactSectionForm.reset();
+  });
+
+  detailsSEctionInput.addEventListener(`input`, function () {
+    const inputValidity = detailsSEctionInput.validity.patternMismatch;
+    if (!inputValidity) {
+      detailsSEctionInput.setCustomValidity(``);
+    } else {
+      detailsSEctionInput.setCustomValidity(`Введите номер телефона`);
+    }
+  });
+
+  contactSectionInput.addEventListener(`input`, function () {
+    const inputValidity = contactSectionInput.validity.patternMismatch;
+    if (!inputValidity) {
+      contactSectionInput.setCustomValidity(``);
+    } else {
+      contactSectionInput.setCustomValidity(`Введите номер телефона`);
+    }
+  });
 };
 
 
@@ -2964,20 +2998,100 @@ const popupController = () => {
   const contactSectionForm = document.querySelector(`.contact-section__form`);
   const detailsSectionForm = document.querySelector(`.details-section__feedback-form`);
 
-  const popupCallTemplate = document.querySelector(`#call-popup`).content;
-  const popupResultTemplate = document.querySelector(`#result-popup`).content;
-
   const ESC_KEY = 27;
 
+  const render = (container, template, place) => {
+    container.insertAdjacentHTML(place, template);
+  };
+
+  const callPopup = () => {
+    return (
+      `<div class="call-popup">
+        <button class="call-popup__close-button" type="button">
+          <span class="visually-hidden">закрыть окно</span>
+        </button>
+        <h2 class="call-popup__heading">Заказать звонок</h2>
+        <p class="call-popup__description">
+          Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня
+          и обязательно поможем найти ответ на ваш вопрос!
+        </p>
+        <form class="call-popup__form" action="#" method="post">
+          <fieldset class="call-popup__fieldset">
+            <ul class="call-popup__list">
+              <li class="call-popup__item">
+                <label class="call-popup__label visually-hidden" for="call-popup-user-name">Ваше имя:</label>
+                <input class="call-popup__input input" type="tel" name="call-popup-user-name" id="call-popup-user-name"
+                placeholder="ИМЯ" pattern="^[А-Яа-яЁё\s]+$" required>
+                <span class="call-popup__input-error input-error">Введите имя русскими буквами</span>
+              </li>
+              <li class="call-popup__item call-popup__item--req">
+                <label class="call-popup__label visually-hidden" for="call-popup-user-tel">Телефон:*</label>
+                <input class="call-popup__input input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="ТЕЛЕФОН"
+                pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}" required>
+                <span class="call-popup__input-error input-error">Введите телефон в формате +7 (123) 456 78 90</span>
+              </li>
+            </ul>
+          </fieldset>
+          <input class="call-popup__button button" type="submit"><span class="visually-hidden">отправить</span></input>
+          <input class="call-popup__checkbox visually-hidden" type="checkbox" name="popup-consent" id="popup-consent" value="true" required>
+          <label class="call-popup__label call-popup__label--consent" for="popup-consent">
+            Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+          </label>
+        </form>
+      </div>`
+    );
+  };
+
+  const resultPopup = () => {
+    return (
+      `<div class="result-popup">
+        <button class="result-popup__close-button" type="button">
+          <span class="visually-hidden">закрыть окно</span>
+        </button>
+        <h2 class="result-popup__heading">Заявка принята</h2>
+        <p class="result-popup__message">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+        <button class="result-popup__button button">Понятно</button>
+      </div>`
+    );
+  };
+
   const addCallPopup = () => {
-    const popupCallContainer = popupCallTemplate.cloneNode(true);
-    mainSection.appendChild(popupCallContainer);
+    mainSection.classList.add(`page-main--faded`);
+    render(mainSection, callPopup(), `beforeend`);
     const popupCall = document.querySelector(`.call-popup`);
     const closeButton = popupCall.querySelector(`.call-popup__close-button`);
     const popupForm = document.querySelector(`.call-popup__form`);
     const callInput = document.getElementById(`call-popup-user-tel`);
+    const userNameInput = document.getElementById(`call-popup-user-name`);
+    const popupCheckbox = popupCall.querySelector(`.call-popup__checkbox`);
 
-    inputmask__WEBPACK_IMPORTED_MODULE_0___default()("+7 (999) 999 99 99").mask(callInput);
+    userNameInput.focus();
+
+    inputmask__WEBPACK_IMPORTED_MODULE_0___default()({
+      mask: "+7 (999) 999 99 99",
+      greedy: false,
+    }).mask(callInput);
+
+    callInput.addEventListener(`input`, function () {
+      const inputValidity = callInput.validity.patternMismatch;
+      if (!inputValidity) {
+        callInput.setCustomValidity(``);
+      } else {
+        callInput.setCustomValidity(`Введите номер телефона`);
+      }
+    });
+
+    popupCheckbox.setCustomValidity(`Необходимо подтвердить согласие на обработку персональных данных`);
+
+    popupCheckbox.addEventListener(`change`, function () {
+      const сheckboxValidity = callInput.validity.valid;
+      if (!сheckboxValidity) {
+        popupCheckbox.setCustomValidity(`Необходимо подтвердить согласие на обработку персональных данных`);
+      } else {
+        popupCheckbox.setCustomValidity(``);
+      }
+    });
+
     document.body.style.overflow = `hidden`;
 
     deletePopup(popupCall, closeButton);
@@ -2985,8 +3099,8 @@ const popupController = () => {
   };
 
   const addResultPopup = () => {
-    const popupResultContainer = popupResultTemplate.cloneNode(true);
-    mainSection.appendChild(popupResultContainer);
+    mainSection.classList.add(`page-main--faded`);
+    render(mainSection, resultPopup(), `beforeend`);
     const popupResult = document.querySelector(`.result-popup`);
     const closeButton = popupResult.querySelector(`.result-popup__close-button`);
     const okButton = popupResult.querySelector(`.result-popup__button`);
@@ -2999,19 +3113,15 @@ const popupController = () => {
 
   const onPopupResultSubmit = (evt) => {
     evt.preventDefault();
-
     const popupCall = document.querySelector(`.call-popup`);
-    const popupResult = document.querySelector(`.result-popup`);
-    const popupCheckbox = document.querySelector(`.call-popup__checkbox`);
-
-    if (!popupCheckbox.validity.valid) {
-      popupCheckbox.setCustomValidity("Ватафак мазафака?");
-    }
+    const popupResult = popupCall.querySelector(`.result-popup`);
 
     popupCall.remove();
+
     if (!popupResult) {
       addResultPopup();
     }
+
     document.removeEventListener(`click`, onPopupResultSubmit);
   };
 
@@ -3021,6 +3131,7 @@ const popupController = () => {
       document.body.style.overflow = `auto`;
       document.removeEventListener(`keydown`, onPopupEscPress);
       document.removeEventListener(`click`, onPopupClose);
+      mainSection.classList.remove(`page-main--faded`);
     };
 
     const onPopupEscPress = function (evt) {
@@ -3076,8 +3187,11 @@ const questionsController = () => {
   });
 
   questionsList.addEventListener(`click`, function (evt) {
-    if (evt.target.tagName === `BUTTON`) {
-      const questionItem = evt.target.parentElement;
+    if (evt.target.tagName === `BUTTON` || evt.target.tagName === `P` || evt.target.tagName === `LI`) {
+      let questionItem = evt.target.parentElement;
+      if (evt.target.tagName === `LI`) {
+        questionItem = evt.target;
+      }
       const questionDescription = questionItem.querySelector(`.questions-section__item-description`);
 
       if (questionItem.classList.contains(`questions-section__item--closed`)) {
@@ -3256,15 +3370,13 @@ const yandexMapController = () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inputmask */ "./node_modules/inputmask/index.js");
-/* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _controllers_questions_controller_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controllers/questions-controller.js */ "./source/js/src/controllers/questions-controller.js");
-/* harmony import */ var _controllers_reviews_controller_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/reviews-controller.js */ "./source/js/src/controllers/reviews-controller.js");
-/* harmony import */ var _controllers_gallery_controller_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./controllers/gallery-controller.js */ "./source/js/src/controllers/gallery-controller.js");
-/* harmony import */ var _controllers_popup_controller_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./controllers/popup-controller.js */ "./source/js/src/controllers/popup-controller.js");
-/* harmony import */ var _controllers_webp_controller_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./controllers/webp-controller.js */ "./source/js/src/controllers/webp-controller.js");
+/* harmony import */ var _controllers_questions_controller_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./controllers/questions-controller.js */ "./source/js/src/controllers/questions-controller.js");
+/* harmony import */ var _controllers_reviews_controller_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controllers/reviews-controller.js */ "./source/js/src/controllers/reviews-controller.js");
+/* harmony import */ var _controllers_gallery_controller_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./controllers/gallery-controller.js */ "./source/js/src/controllers/gallery-controller.js");
+/* harmony import */ var _controllers_popup_controller_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./controllers/popup-controller.js */ "./source/js/src/controllers/popup-controller.js");
+/* harmony import */ var _controllers_webp_controller_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./controllers/webp-controller.js */ "./source/js/src/controllers/webp-controller.js");
+/* harmony import */ var _controllers_input_controller_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./controllers/input-controller.js */ "./source/js/src/controllers/input-controller.js");
 /* harmony import */ var _controllers_yandex_map_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./controllers/yandex-map.js */ "./source/js/src/controllers/yandex-map.js");
-
 
 
 
@@ -3275,34 +3387,30 @@ __webpack_require__.r(__webpack_exports__);
 
 // замена фоновых png изображений на webp
 
-Object(_controllers_webp_controller_js__WEBPACK_IMPORTED_MODULE_5__["webpController"])();
+Object(_controllers_webp_controller_js__WEBPACK_IMPORTED_MODULE_4__["webpController"])();
 
 // call-popup
 
-Object(_controllers_popup_controller_js__WEBPACK_IMPORTED_MODULE_4__["popupController"])();
+Object(_controllers_popup_controller_js__WEBPACK_IMPORTED_MODULE_3__["popupController"])();
 
 // Открытие/закрытие ответа на вопрос в questions-section
 
-Object(_controllers_questions_controller_js__WEBPACK_IMPORTED_MODULE_1__["questionsController"])();
+Object(_controllers_questions_controller_js__WEBPACK_IMPORTED_MODULE_0__["questionsController"])();
 
 // Активация слайдера для reviews-section
 
-Object(_controllers_reviews_controller_js__WEBPACK_IMPORTED_MODULE_2__["reviewsController"])();
+Object(_controllers_reviews_controller_js__WEBPACK_IMPORTED_MODULE_1__["reviewsController"])();
 
 
 // Активация слайдера для gallery-section
 
-Object(_controllers_gallery_controller_js__WEBPACK_IMPORTED_MODULE_3__["galleryController"])();
-
+Object(_controllers_gallery_controller_js__WEBPACK_IMPORTED_MODULE_2__["galleryController"])();
 
 // Подключение Яндекс карт
 
 Object(_controllers_yandex_map_js__WEBPACK_IMPORTED_MODULE_6__["yandexMapController"])();
 
-const detailsSEctionInput = document.getElementById(`details-section-user-tel`);
-const contactSectionInput = document.getElementById(`contact-section-user-tel`);
-inputmask__WEBPACK_IMPORTED_MODULE_0___default()("+7 (999) 999 99 99").mask(detailsSEctionInput);
-inputmask__WEBPACK_IMPORTED_MODULE_0___default()("+7 (999) 999 99 99").mask(contactSectionInput);
+Object(_controllers_input_controller_js__WEBPACK_IMPORTED_MODULE_5__["inputController"])();
 
 
 /***/ })

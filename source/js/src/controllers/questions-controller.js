@@ -7,8 +7,11 @@ export const questionsController = () => {
   });
 
   questionsList.addEventListener(`click`, function (evt) {
-    if (evt.target.tagName === `BUTTON`) {
-      const questionItem = evt.target.parentElement;
+    if (evt.target.tagName === `BUTTON` || evt.target.tagName === `P` || evt.target.tagName === `LI`) {
+      let questionItem = evt.target.parentElement;
+      if (evt.target.tagName === `LI`) {
+        questionItem = evt.target;
+      }
       const questionDescription = questionItem.querySelector(`.questions-section__item-description`);
 
       if (questionItem.classList.contains(`questions-section__item--closed`)) {

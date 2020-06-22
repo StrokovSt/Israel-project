@@ -11,7 +11,7 @@
   }
 }
 
-.questions-section  > .container {
+.questions-section > .container {
   padding: 0;
 
   background-image: url("../img/desktop-questions.png");
@@ -122,13 +122,13 @@
 
 @media (max-width: $desktop-width) {
   .questions-section {
-    min-height: 703px;
+    min-height: auto;
     padding: 0 16px;
 
     background: none;
   }
 
-  .questions-section  > .container {
+  .questions-section > .container {
     background: none;
   }
 

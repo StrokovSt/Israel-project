@@ -1,5 +1,3 @@
-import Inputmask from "inputmask";
-
 import {questionsController} from "./controllers/questions-controller.js";
 import {reviewsController} from "./controllers/reviews-controller.js";
 import {galleryController} from "./controllers/gallery-controller.js";

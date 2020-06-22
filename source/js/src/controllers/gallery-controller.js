@@ -26,7 +26,7 @@ export const galleryController = () => {
   let slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
   sliderPoints[clickCount].classList.add(`gallery-section__slider-point--active`);
 
-  galleryControlsContainer.addEventListener(`click`, function (evt) {
+  galleryControlsContainer.addEventListener(`click`, function () {
     sliderPoints.forEach((item) => {
       item.classList.remove(`gallery-section__slider-point--active`);
     });
@@ -38,7 +38,7 @@ export const galleryController = () => {
     if (evt.target.tagName === `LI`) {
       clickCount = evt.target.dataset.point;
       slides.forEach((item) => {
-        item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+        item.slide.style.transform = `translateX(` + (slideStep - 35) * clickCount + `px)`;
       });
     }
   });
@@ -48,7 +48,7 @@ export const galleryController = () => {
       showControls();
       slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
       slides.forEach((item) => {
-        item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+        item.slide.style.transform = `translateX(` + (slideStep - 35) * clickCount + `px)`;
       });
     } else {
       galleryControlsContainer.classList.remove(`gallery-section__controls-container--on`);
