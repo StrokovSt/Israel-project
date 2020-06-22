@@ -1,378 +1,78 @@
+.page-main {
+  &--faded {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: rgba(277, 277, 277, 0.7);
+    }
+  }
+}
+
 .page-main__container {
   padding: 0;
 }
 
 .page-main__headline-section {
-  position: relative;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -85px;
-
-    display: block;
-    height: 906px;
-    width: 1367px;
-
-    background-image: url("../img/background-desktop-headline.jpg");
-    background-position: center;
-    background-size: auto;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-headline.webp");
-    }
-  }
+  position: absolute;
+  top: -38px;
 }
 
 .page-main__about-program-section {
-  position: relative;
-
-  margin-bottom: 213px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 125px;
-    left: 50%;
-    right: 0;
-
-    display: block;
-    width: 1366px;
-    height: 604px;
-
-    background-image: url("../img/background-desktop-about_program-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translate(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-about_program-watercolor.webp");
-    }
-  }
-}
-
-.page-main__programs-section {
-  position: relative;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -50px;
-    right: -100px;
-
-    display: block;
-    height: 426px;
-    width: 680px;
-
-    background-image: url("../img/background-desktop-programs-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-programs-watercolor.webp");
-    }
-  }
+  margin-bottom: 49px;
 }
 
 .page-main__contact-section {
-  position: relative;
-
-  margin: 0;
-  margin-bottom: 163px;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 200px;
-    left: -12vw;
-
-    display: block;
-    height: 262px;
-    width: 147px;
-
-    background-image: url("../img/background-desktop-contact-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-contact-watercolor.webp");
-    }
-  }
+  margin-bottom: 76px;
 }
 
 .page-main__conditions-section {
   position: relative;
-  margin-bottom: 171px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -200px;
-    left: -20px;
-
-    display: block;
-    height: 1208px;
-    width: 1487px;
-
-    background-image: url("../img/background-desktop-conditions-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-conditions-watercolor.webp");
-    }
-  }
+  margin-bottom: 152px;
 }
 
 .page-main__gallery-section {
   position: relative;
 
-  margin-bottom: 270px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -30px;
-    left: 50%;
-
-    display: block;
-    height: 950px;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-gallery-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-gallery-watercolor.webp");
-    }
-  }
+  margin-bottom: 126px;
 }
 
 .page-main__exposition-section {
   position: relative;
 
-  margin-bottom: 332px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -130px;
-    left: 50%;
-
-    display: block;
-    height: 583px;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-exposition.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-exposition.webp");
-    }
-  }
+  margin-bottom: 135px;
 }
 
 .page-main__questions-section {
   position: relative;
 
-  margin-bottom: 152px;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 600px;
-    left: 20px;
-
-    display: block;
-    height: 177px;
-    width: 194px;
-
-    background-image: url("../img/background-desktop-bag-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -110px;
-    left: 50%;
-
-    display: block;
-    height: 1119px;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-questions-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::before {
-      background-image: url("../img/background-desktop-bag-watercolor.webp");
-    }
-
-    &::after {
-      background-image: url("../img/background-desktop-questions-watercolor.webp");
-    }
-  }
+  margin-bottom: 32px;
 }
 
 .page-main__reviews-section {
   position: relative;
 
-  margin-bottom: 86px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    display: block;
-    height: 100vh;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-reviews-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-reviews-watercolor.webp");
-    }
-  }
+  margin-bottom: 108px;
 }
 
 .page-main__details-section {
   position: relative;
-
-  margin-bottom: 72px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: -110px;
-    left: 50%;
-
-    display: block;
-    height: 94vh;
-    width: 100vw;
-
-    background-image: url("../img/background-desktop-details-watercolor.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-
-  &--webp-on {
-    &::after {
-      background-image: url("../img/background-desktop-details-watercolor.webp");
-    }
-  }
-}
-
-@media (min-width: $big-desktop-width) {
-  .page-main {
-    &::after {
-      top: 0;
-
-      height: 826px;
-    }
-  }
-
-  .page-main__about-program-section {
-    margin-top: 20px;
-  }
 }
 
 /* ----------------- Разметкdа под tablet ----------------- */
 
 @media (max-width: $desktop-width) {
   .page-main__headline-section {
-    margin-bottom: 59px;
-
-    &::after {
-      top: -27px;
-
-      display: block;
-      height: 587px;
-      width: 100vw;
-
-      background-image: url("../img/background-mobile-headline.png");
-      background-position: center;
-      background-size: auto;
-      background-repeat: no-repeat;
-    }
-
-    &--webp-on {
-      &::after {
-        background-image: url("../img/background-mobile-headline.webp");
-      }
-    }
+    margin-bottom: 28px;
   }
 
   .page-main__conditions-section {
-    margin-bottom: 120px;
-
-    &::after {
-      display: none;
-    }
+    margin-bottom: 78px;
   }
 
   .page-main__contact-section {
@@ -380,11 +80,7 @@
   }
 
   .page-main__gallery-section {
-    margin-bottom: 120px;
-
-    &::after {
-      display: none;
-    }
+    margin-bottom: 0;
   }
 
   .page-main__exposition-section {
@@ -393,14 +89,10 @@
 
   .page-main__questions-section {
     margin-bottom: 80px;
-
-    &::after {
-      display: none;
-    }
   }
 
   .page-main__details-section {
-    margin-bottom: 64px;
+    margin-bottom: 51px;
   }
 }
 
@@ -408,82 +100,27 @@
 
 @media (max-width: $tablet-width) {
   .page-main__about-program-section {
-    margin-bottom: 88px;
-
-    &::after {
-      top: 185px;
-      left: 50%;
-
-      width: 100vw;
-      height: 186px;
-    }
+    margin-bottom: 31px;
   }
 
   .page-main__programs-section {
     margin: 0;
     margin-bottom: 80px;
-
-    &::after {
-      top: 110px;
-      right: -10px;
-
-      display: block;
-      height: 201px;
-      width: 320px;
-    }
   }
 
   .page-main__contact-section {
     position: relative;
 
     margin: 0;
-    margin-bottom: 80px;
-
-    &::before {
-      top: -40px;
-      left: -50px;
-
-      height: 162px;
-      width: 120px;
-    }
-  }
-
-  .page-main__conditions-section {
-    margin-bottom: 73px;
   }
 
   .page-main__exposition-section {
     margin-bottom: 80px;
-
-    &::after {
-      top: 50px;
-      left: 50%;
-
-      height: 272px;
-      min-width: 632px;
-      width: 100vw;
-    }
   }
 
   .page-main__reviews-section {
     position: relative;
 
-    margin-bottom: 110px;
-
-    &::after {
-      top: 50%;
-      left: 50%;
-
-      height: 419px;
-      width: 100vw;
-
-      background-image: url("../img/background-mobile-reviews-watercolor.png");
-    }
-
-    &--webp-on {
-      &::after {
-        background-image: url("../img/background-mobile-reviews-watercolor.webp");
-      }
-    }
+    margin-bottom: 68px;
   }
 }

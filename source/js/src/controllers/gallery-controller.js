@@ -23,41 +23,22 @@ export const galleryController = () => {
     });
   });
 
-  const slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
+  let slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
   sliderPoints[clickCount].classList.add(`gallery-section__slider-point--active`);
 
-  galleryControlsContainer.addEventListener(`click`, function (evt) {
-    const controlType = evt.target.classList.contains(`gallery-section__control--left`) ? `left` : `right`;
-    if (evt.target.tagName === `BUTTON` && controlType === `right`) {
-      clickCount += 1;
-      if (clickCount >= slides.length) {
-        clickCount = 0;
-      }
-    }
-
-    if (evt.target.tagName === `BUTTON` && controlType === `left`) {
-      clickCount -= 1;
-      if (clickCount < 0) {
-        clickCount = slides.length - 1;
-      }
-    }
-
+  galleryControlsContainer.addEventListener(`click`, function () {
     sliderPoints.forEach((item) => {
       item.classList.remove(`gallery-section__slider-point--active`);
     });
 
     sliderPoints[clickCount].classList.add(`gallery-section__slider-point--active`);
-
-    slides.forEach((item) => {
-      item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
-    });
   });
 
   sliderPointsContainer.addEventListener(`click`, function (evt) {
     if (evt.target.tagName === `LI`) {
       clickCount = evt.target.dataset.point;
       slides.forEach((item) => {
-        item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+        item.slide.style.transform = `translateX(` + (slideStep - 35) * clickCount + `px)`;
       });
     }
   });
@@ -65,8 +46,9 @@ export const galleryController = () => {
   window.addEventListener(`resize`, function () {
     if (galleryContainer.offsetWidth < 1024) {
       showControls();
+      slideStep = -parseFloat(getComputedStyle(sliderItems[0]).width);
       slides.forEach((item) => {
-        item.slide.style.transform = `translateX(` + slideStep * clickCount + `px)`;
+        item.slide.style.transform = `translateX(` + (slideStep - 35) * clickCount + `px)`;
       });
     } else {
       galleryControlsContainer.classList.remove(`gallery-section__controls-container--on`);

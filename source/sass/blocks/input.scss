@@ -1,0 +1,40 @@
+.input {
+  height: 58px;
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-size: $big-font-size;
+  text-transform: none;
+  font-weight: 500;
+  border: 1px solid #e3e3e3;
+  border-radius: 30px;
+  outline: none;
+  transition: 0.2s ease all;
+
+  &:hover,
+  &:focus {
+    border-color: $gradient-yellow-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #999999;
+  }
+
+  &:valid {
+    border-color: grey;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+
+  &:invalid:not(:placeholder-shown) + .input-error {
+    opacity: 1;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+}

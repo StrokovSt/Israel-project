@@ -2,16 +2,48 @@
 /* ----------------- Разметкdа под desktop ----------------- */
 
 .headline-section {
+  position: relative;
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
   min-height: 809px;
+
+  background: url("../img/background-desktop-headline.png") center no-repeat;
+  background-size: cover;
+
+  &--webp-on {
+    background-image: url("../img/background-desktop-headline.webp");
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    display: block;
+    width: 400px;
+    height: 270px;
+    background-color: #e5e5e5;
+    opacity: 0.8;
+
+    border-radius: 30%;
+
+    transform: translateX(-50%);
+    z-index: -1;
+  }
 }
 
 .headline-section__description {
   width: 350px;
   margin: 0;
+  margin-top: 490px;
+  margin-bottom: 32px;
   padding: 0;
-  padding-top: 451px;
 
   text-align: center;
   font-size: $h3-mini-size;
@@ -21,18 +53,91 @@
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
+.headline-section__scroll {
+  position: relative;
+
+  display: block;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 0;
+
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+
+  transition: 0.1s ease all;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 13px 0 #ffffff;
+  }
+
+  &:active {
+    box-shadow: 0 0 26px 0 #ffffff;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    background-image: url("../img/mouse.png");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    display: block;
+    width: 2px;
+    height: 55px;
+    background-color: #ffffff;
+
+    transform: translateX(-50%);
+  }
+}
+
 /* ----------------- Разметкdа под mobile ----------------- */
 
 @media (max-width: $desktop-width) {
   .headline-section {
     display: flex;
-    justify-content: center;
-    min-height: 506px;
+    justify-content: flex-start;
+    min-height: 536px;
+
+    background: url("../img/background-mobile-headline.png") 50% 0 no-repeat;
+    background-size: auto;
+
+    &--webp-on {
+      background-image: url("../img/background-mobile-headline.webp");
+    }
+
+    &::after {
+      width: 300px;
+      height: 200px;
+    }
   }
 
   .headline-section__description {
     max-width: 288px;
-    padding-top: 265px;
+    margin: 0;
+    margin-bottom: 28px;
+    padding-top: 303px;
 
     font-size: 20px;
   }

@@ -3,7 +3,10 @@ import {reviewsController} from "./controllers/reviews-controller.js";
 import {galleryController} from "./controllers/gallery-controller.js";
 import {popupController} from "./controllers/popup-controller.js";
 import {webpController} from "./controllers/webp-controller.js";
+import {inputController} from "./controllers/input-controller.js";
 import {yandexMapController} from "./controllers/yandex-map.js";
+
+// замена фоновых png изображений на webp
 
 webpController();
 
@@ -24,7 +27,8 @@ reviewsController();
 
 galleryController();
 
-
 // Подключение Яндекс карт
 
 yandexMapController();
+
+inputController();

@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   align-items: center;
 
-  min-height: 75px;
+  min-height: 80px;
 
   &::after {
     content: "";
@@ -25,6 +25,7 @@
 
 .page-footer__copyright-text {
   font-size: 12px;
+  padding-left: 24px;
   opacity: 0.5;
 }
 
@@ -71,5 +72,9 @@
 
     padding: 0 26px;
     min-height: 200px;
+  }
+
+  .page-footer__copyright-text {
+    padding-left: 0;
   }
 }

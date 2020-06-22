@@ -26,30 +26,31 @@
             </a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link page-header__link--order" href="#visit-section">Заказать звонок</a>
+            <a class="page-header__link page-header__link--order" href="#">Заказать звонок</a>
           </li>
         </ul>
       </div>
     </header>
 
     <main class="page-main">
-      <div class="page-main__container container">
 
-        <section class="page-main__headline-section headline-section" data-bg="webp">
-          <h1 class="headline-section__heading visually-hidden">Израиль</h1>
-          <p class="headline-section__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
-        </section>
+      <section class="page-main__headline-section headline-section" data-bg="webp">
+        <h1 class="headline-section__heading visually-hidden">Израиль</h1>
+        <p class="headline-section__description">Учёба, путешествие и карьера для еврейской молодёжи</p>
+        <a class="headline-section__scroll" href="#contact-section"><span class="visually-hidden">Перейти к разделу "Хочу поехать"</span></a>
+      </section>
 
-        <section class="page-main__about-program-section about-program-section" data-bg="webp">
-          <h2 class="about-program-section__heading">О программе</h2>
-          <p class="about-program-section__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.
-            Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
-            В течение освоения программ предусмотрен грант от 4200 до 8400$.
-          </p>
-          <a class="about-program-section__link" href="#"><span class="visually-hidden">Смотреть ролик</span></a>
-        </section>
+      <section class="page-main__about-program-section about-program-section" data-bg="webp">
+        <h2 class="about-program-section__heading">О программе</h2>
+        <p class="about-program-section__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.
+          Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
+          В течение освоения программ предусмотрен грант от 4200 до 8400$.
+        </p>
+        <a class="about-program-section__link" href="#"><span class="visually-hidden">Смотреть ролик</span></a>
+      </section>
 
-        <section class="page-main__programs-section programs-section" data-bg="webp">
+      <section class="page-main__programs-section programs-section" data-bg="webp">
+        <div class="container">
           <h2 class="programs-section__heading">Программы</h2>
           <div class="programs-section__container">
             <input class="visually-hidden programs-section__slider programs-section__slider--general" type="radio" id="slider-general" name="slider-toggle">
@@ -62,7 +63,7 @@
                 <svg class="programs-section__img" width="36" height="36">
                   <use xlink:href="#icon-general"></use>
                 </svg>
-                <label class="programs-section__nav-heading programs-section__nav-heading--general" for="slider-general">Общие</label>
+              <label class="programs-section__nav-heading programs-section__nav-heading--general" for="slider-general">Общие</label>
               </li>
               <li class="programs-section__item programs-section__item--academic">
                 <svg class="programs-section__img" width="36" height="36">
@@ -112,6 +113,8 @@
                 <p class="programs-section__slide-description">Провести семестр или год за рубежом, знакомясь с различными культурами и идеями,
                   традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира,
                   это также академический центр, живая лаборатория идей и творческого исследования.
+                </p>
+                <p class="programs-section__slide-description programs-section__slide-description--additional">
                   Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
                   законодательного и делового администрирования или искусства?
                   Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.
@@ -149,22 +152,27 @@
               </li>
             </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="page-main__contact-section contact-section" data-bg="webp">
+      <section id="contact-section" class="page-main__contact-section contact-section" data-bg="webp">
+        <div class="container">
           <h2 class="contact-section__heading">Хочу поехать!</h2>
           <p class="contact-section__description">Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
           <form class="contact-section__form" action="#" method="post">
             <fieldset class="contact-section__fieldset">
               <label class="contact-section__label visually-hidden" for="contact-section-user-tel">Телефон:*</label>
-              <input class="contact-section__input contact-section__input--req" type="tel" name="contact-section-user-tel" id="contact-section-user-tel"
-              placeholder="ТЕЛЕФОН" pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
+              <input class="contact-section__input input" type="tel" name="contact-section-user-tel" id="contact-section-user-tel"
+              placeholder="ТЕЛЕФОН" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}" required>
+              <span class="contact-section__input-error input-error">Введите телефон в формате +7 (123) 456 78 90</span>
             </fieldset>
             <button class="contact-section__button button" type="submit">Перезвоните мне</button>
           </form>
-        </section>
+        </div>
+      </section>
 
-        <section class="page-main__conditions-section conditions-section" data-bg="webp">
+      <section class="page-main__conditions-section conditions-section" data-bg="webp">
+        <div class="conditions-section__position-container">
           <div class="conditions-section__container">
             <h2 class="conditions-section__heading">Как поехать</h2>
             <p class="conditions-section__description">
@@ -190,9 +198,11 @@
               Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="page-main__gallery-section gallery-section" data-bg="webp">
+      <section class="page-main__gallery-section gallery-section" data-bg="webp">
+        <div class="container">
           <h2 class="gallery-section__heading">Жизнь в израиле</h2>
           <p class="gallery-section__description">
             Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой
@@ -251,9 +261,6 @@
             </li>
           </ul>
           <div class="gallery-section__controls-container">
-            <button class="gallery-section__control gallery-section__control--left">
-              <span class="visually-hidden">свайп влево</span>
-            </button>
             <ul class="gallery-section__slider-points">
               <li data-point="0" class="gallery-section__slider-point"></li>
               <li data-point="1" class="gallery-section__slider-point"></li>
@@ -261,33 +268,32 @@
               <li data-point="3" class="gallery-section__slider-point"></li>
               <li data-point="4" class="gallery-section__slider-point"></li>
             </ul>
-            <button class="gallery-section__control gallery-section__control--right">
-              <span class="visually-hidden">свайп вправо</span>
-            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="page-main__exposition-section exposition-section" data-bg="webp">
-          <div class="exposition-section__container">
-            <h2 class="exposition-section__heading">#masaisrael</h2>
-            <p class="exposition-section__description">Познакомьтесь с программой от первого лица!
-              Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.
-            </p>
-            <button class="exposition-section__button button" type="submit">Смотреть фото</button>
-          </div>
-        </section>
+      <section class="page-main__exposition-section exposition-section" data-bg="webp">
+        <div class="exposition-section__container">
+          <h2 class="exposition-section__heading">#masaisrael</h2>
+          <p class="exposition-section__description">Познакомьтесь с программой от первого лица!
+            Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.
+          </p>
+          <button class="exposition-section__button button" type="submit"><span>Смотреть фото</span></button>
+        </div>
+      </section>
 
-        <section class="page-main__questions-section questions-section" data-bg="webp">
+      <section class="page-main__questions-section questions-section" data-bg="webp">
+        <div class="container">
           <h2 class="questions-section__heading">Частые вопросы</h2>
           <ol class="questions-section__list">
-            <li class="questions-section__item">
+            <li class="questions-section__item questions-section__item--closed">
               <p class="questions-section__item-staging">Кто организатор? Какие сроки у программы?</p>
               <button class="questions-section__item-button">
                 <span class="visually-hidden">Показать ответ</span>
               </button>
               <p class="questions-section__item-description">Мяу Мяовски</p>
             </li>
-            <li class="questions-section__item">
+            <li class="questions-section__item questions-section__item--closed">
               <p class="questions-section__item-staging">Что такое грант на обучение?</p>
               <button class="questions-section__item-button">
                 <span class="visually-hidden">Показать ответ</span>
@@ -305,7 +311,7 @@
                 и поэтому предусматривается определённая доля личного участия.
               </p>
             </li>
-            <li class="questions-section__item">
+            <li class="questions-section__item questions-section__item--closed">
               <p class="questions-section__item-staging">Что такое грант на обучение?</p>
               <button class="questions-section__item-button">
                 <span class="visually-hidden">Показать ответ</span>
@@ -316,7 +322,7 @@
                 и поэтому предусматривается определённая доля личного участия.
               </p>
             </li>
-            <li class="questions-section__item">
+            <li class="questions-section__item questions-section__item--closed">
               <p class="questions-section__item-staging">Признаётся ли учеба в рамках проекта для дальнейшего обучения?</p>
               <button class="questions-section__item-button">
                 <span class="visually-hidden">Показать ответ</span>
@@ -328,7 +334,7 @@
                 существенных финансовых и административных условий.
               </p>
             </li>
-            <li class="questions-section__item">
+            <li class="questions-section__item questions-section__item--closed">
               <p class="questions-section__item-staging">Как выглдядит полный процесс регистрации на программу «Маса»?</p>
               <button class="questions-section__item-button">
                 <span class="visually-hidden">Показать ответ</span>
@@ -339,10 +345,12 @@
               </p>
             </li>
           </ol>
-        </section>
+        </div>
+      </section>
 
         <section class="page-main__reviews-section reviews-section" data-bg="webp">
           <h2 class="reviews-section__heading">Отзывы</h2>
+          <div class="container">
           <div class="reviews-section__slider">
             <ul class="reviews-section__slider-wrapper">
               <li class="reviews-section__slider-item">
@@ -354,7 +362,7 @@
                   <img src="img/mobile-reviews.png" width="240" height="320" alt="Автор">
                 </picture>
                 <div class="reviews-section__review-card">
-                  <p class="reviews-section__author">Ольга Михайловна</p>
+                  <p class="reviews-section__author">Ольга Михайлова</p>
                   <div class="reviews-section__program-container">
                     <p class="reviews-section__program reviews-section__program--colored">Программа:</p>
                     <p class="reviews-section__program">Арт-Тель, февраль-сетнябрь 2017</p>
@@ -362,6 +370,8 @@
                   <p class="reviews-section__description">
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура».
                     Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
+                  </p>
+                  <p class="reviews-section__description">
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам.
                     Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
@@ -403,7 +413,7 @@
                   <img src="img/mobile-reviews.png" width="240" height="320" alt="Автор">
                 </picture>
                 <div class="reviews-section__review-card">
-                  <p class="reviews-section__author">Ольга Михайловна</p>
+                  <p class="reviews-section__author">Ольга Михайлова</p>
                   <div class="reviews-section__program-container">
                     <p class="reviews-section__program reviews-section__program--colored">Программа:</p>
                     <p class="reviews-section__program">Арт-Тель, февраль-сетнябрь 2017</p>
@@ -451,7 +461,7 @@
                   <img src="img/mobile-reviews.png" width="240" height="320" alt="Автор">
                 </picture>
                 <div class="reviews-section__review-card">
-                  <p class="reviews-section__author">Ольга Михайловна</p>
+                  <p class="reviews-section__author">Ольга Михайлова</p>
                   <div class="reviews-section__program-container">
                     <p class="reviews-section__program reviews-section__program--colored">Программа:</p>
                     <p class="reviews-section__program">Арт-Тель, февраль-сетнябрь 2017</p>
@@ -492,7 +502,7 @@
               </li>
             </ul>
             <div class="reviews-section__controls-container">
-              <p class="reviews-section__control-count">3/6</p>
+              <p class="reviews-section__control-count">3 / 6</p>
               <button class="reviews-section__control reviews-section__control--left">
                 <span class="visually-hidden">свайп влево</span>
               </button>
@@ -501,11 +511,12 @@
               </button>
             </div>
           </div>
+        </div>
         </section>
 
         <section class="page-main__details-section details-section" data-bg="webp">
+          <div class="container">
           <h2 class="details-section__heading">Узнать подробности</h2>
-
           <div class="details-section__city-container">
             <label class="details-section__label details-section__label--city" for="city-select">Ваш город:</label>
             <select class="details-section__select" name="city-select" id="city-select">
@@ -579,26 +590,29 @@
                 <ul class="details-section__list">
                   <li class="details-section__item">
                     <label class="visually-hidden" for="details-section-user-name">Ваше имя:</label>
-                    <input class="details-section__input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ" required>
+                    <input class="details-section__input input" type="tel" name="details-section-user-name" id="details-section-user-name" placeholder="ИМЯ"
+                    pattern="^[А-Яа-яЁё\s]+$" required>
+                    <span class="details-section__input-error input-error">Введите имя русскими буквами</span>
                   </li>
                   <li class="details-section__item">
                     <label class="visually-hidden" for="details-section-user-tel">Ваш телефон:</label>
-                    <input class="details-section__input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="+7 (923) 41"
-                    pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
+                    <input class="details-section__input input" type="tel" name="details-section-user-tel" id="details-section-user-tel" placeholder="ТЕЛЕФОН"
+                    pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}\s\d{2}\s\d{2}" required>
+                    <span class="details-section__input-error input-error">Введите телефон в формате <br /> +7 (123) 456 78 90</span>
                   </li>
                 </ul>
               </fieldset>
               <button class="details-section__button button" type="submit">Перезвоните мне</button>
             </form>
           </article>
+        </div>
         </section>
-      </div>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo" role="banner">
-          <img class="page-footer__logo-image" src="img/logo-grey.png"  width="99" height="31" alt="Логотип: Masovon">
+          <img class="page-footer__logo-image" src="img/logo-grey.png"  width="85" height="27" alt="Логотип: Masovon">
         </a>
 
         <span class="page-footer__copyright-text">Copyright someDesignCompany ©2019</span>
@@ -632,51 +646,7 @@
       </div>
     </footer>
 
-    <template id="call-popup">
-      <div class="call-popup">
-        <button class="call-popup__close-button" type="button">
-          <span class="visually-hidden">закрыть окно</span>
-        </button>
-        <h2 class="call-popup__heading">Заказать звонок</h2>
-        <p class="call-popup__description">
-          Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня
-          и обязательно поможем найти ответ на ваш вопрос!
-        </p>
-        <form class="call-popup__form" action="#" method="post">
-          <fieldset class="call-popup__fieldset">
-            <ul class="call-popup__list">
-              <li class="call-popup__item">
-                <label class="call-popup__label visually-hidden" for="call-popup-user-name">Ваше имя:</label>
-                <input class="call-popup__input questions-section__input--req" type="tel" name="call-popup-user-name" id="call-popup-user-name"
-                placeholder="ИМЯ" required>
-              </li>
-              <li class="call-popup__item call-popup__item--req">
-                <label class="call-popup__label visually-hidden" for="call-popup-user-tel">Телефон:*</label>
-                <input class="call-popup__input" type="tel" name="call-popup-user-tel" id="call-popup-user-tel" placeholder="ТЕЛЕФОН"
-                pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="call-popup__button button" type="submit">Перезвоните мне</button>
-          <input class="call-popup__checkbox visually-hidden" type="checkbox" name="popup-consent" id="popup-consent" value="true">
-          <label class="call-popup__label call-popup__label--consent" for="popup-consent">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
-        </form>
-      </div>
-    </template>
-
-    <template id="result-popup">
-      <div class="result-popup">
-        <button class="result-popup__close-button" type="button">
-          <span class="visually-hidden">закрыть окно</span>
-        </button>
-        <h2 class="result-popup__heading">Заявка принята</h2>
-        <p class="result-popup__message">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-        <button class="result-popup__button button">Понятно</button>
-      </div>
-    </template>
-
     <script type="module" src="js/bundle.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=1a9cddfe-ec69-4a28-b149-f437d3adf4c8&lang=ru_RU"></script>
-</body>
   </body>
 </html>

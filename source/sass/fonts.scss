@@ -123,6 +123,30 @@
   font-display: swap;
 }
 
+/* raleway-600 - latin */
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/raleway-v15-latin-600.eot");
+  src: local(""),
+    url("../fonts/raleway-v15-latin-600.woff2") format("woff2"),
+    url("../fonts/raleway-v15-latin-600.woff") format("woff");
+}
+
+/* raleway-700 - latin */
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/raleway-v15-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/raleway-v15-latin-700.woff2") format("woff2"),
+    url("../fonts/raleway-v15-latin-700.woff") format("woff");
+}
+
 /* raleway-800 - latin */
 
 @font-face {
